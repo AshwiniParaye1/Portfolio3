@@ -1,6 +1,6 @@
 import React from "react";
 import About from "./components/About";
-import ExperienceEducation from "./components/ExperienceEducation";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Articles from "./components/Articles";
 import GetInTouch from "./components/GetInTouch";
@@ -12,7 +12,7 @@ const Page = () => {
         <About />
       </div>
       <div className="w-full max-w-5xl">
-        <ExperienceEducation />
+        <Experience />
       </div>
       <div className="w-full max-w-5xl">
         <Projects />
