@@ -4,8 +4,8 @@ import React from "react";
 const Articles = () => {
   return (
     <div>
-      <h1 className="text-xl font-semibold mb-2">Articles</h1>
-      <li className="pl-2">
+      <h1 className="text-xl  mb-2 text-gray-700">Articles</h1>
+      <li className="pl-2 text-gray-500">
         <span className="text-blue-500 hover:text-blue-700">
           <Link
             href="https://peerlist.io/ashwini_paraye/articles/boost-your-development-speed-with-golang"
@@ -15,7 +15,7 @@ const Articles = () => {
           </Link>
         </span>
       </li>
-      <li className="pl-2">
+      <li className="pl-2 text-gray-500">
         <span className="text-blue-500 hover:text-blue-700">
           <Link
             href="https://blog.stackademic.com/step-by-step-breakdown-of-how-golang-behaves-behind-the-scenes-eba1d5582b55"
@@ -25,7 +25,7 @@ const Articles = () => {
           </Link>
         </span>
       </li>
-      <li className="pl-2">
+      <li className="pl-2 text-gray-500">
         <span className=" text-blue-500 hover:text-blue-700">
           <Link
             href="https://blog.stackademic.com/what-does-enumerable-mean-in-javascript-explained-simply-b3e52d00f621"
@@ -35,7 +35,7 @@ const Articles = () => {
           </Link>
         </span>
       </li>
-      <li className="pl-2">
+      <li className="pl-2 text-gray-500">
         <span className=" text-blue-500 hover:text-blue-700">
           <Link
             href="https://blog.stackademic.com/understanding-the-basics-of-next-js-for-beginners-b2e542c3e6e1"
@@ -45,7 +45,7 @@ const Articles = () => {
           </Link>
         </span>
       </li>
-      <p className="mt-2 pl-7">
+      <p className="mt-2 pl-7 text-gray-500">
         Check out more of my articles on{" "}
         <span className="text-blue-500 hover:text-blue-700">
           <Link href="https://medium.com/@ashwini-paraye" target="_blank">
