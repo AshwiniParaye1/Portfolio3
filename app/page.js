@@ -7,22 +7,12 @@ import GetInTouch from "./components/GetInTouch";
 
 const Page = () => {
   return (
-    <div className="bg-white text-black flex flex-col pl-96 pr-96 pt-20 pb-20 justify-between min-h-screen w-full mx-auto p-6 space-y-8">
-      <div className="w-full  max-w-5xl">
-        <About />
-      </div>
-      <div className="w-full max-w-5xl">
-        <Experience />
-      </div>
-      <div className="w-full max-w-5xl">
-        <Projects />
-      </div>
-      <div className="w-full max-w-5xl">
-        <Articles />
-      </div>
-      <div className="w-full max-w-5xl">
-        <GetInTouch />
-      </div>
+    <div className="bg-white text-black flex flex-col xl:pl-80 xl:pr-80 lg:pl-60 lg:pr-60 md:pl-48 md:pr-48 sm:pl-36 sm:pr-36 h-full p-20 gap-10">
+      <About />
+      <Experience />
+      <Projects />
+      <Articles />
+      <GetInTouch />
     </div>
   );
 };
