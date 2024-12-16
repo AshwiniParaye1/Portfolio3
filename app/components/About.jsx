@@ -3,16 +3,16 @@ import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { AiOutlineGithub } from "react-icons/ai";
-import { FaMedium } from "react-icons/fa6";
+import { AiFillMediumSquare } from "react-icons/ai";
 
 const About = () => {
   return (
     <div className="">
       <h1 className="text-xl text-gray-700">Ashwini Paraye</h1>
-      <div className="text-sm text-gray-500 mt-1 mb-4 flex flex-row gap-2">
+      <div className="text-sm text-gray-500 mt-1 mb-4 flex flex-row gap-4">
         <div>
           <Link href="mailto:ashwiniparaye1@gmail.com">
-            <AiOutlineMail />
+            <AiOutlineMail size={20} className="hover:text-gray-700" />
           </Link>
         </div>
         <span>
@@ -20,17 +20,17 @@ const About = () => {
             href="https://www.linkedin.com/in/ashwini-paraye/"
             target="_blank"
           >
-            <RiLinkedinBoxLine />
+            <RiLinkedinBoxLine size={20} className="hover:text-gray-700" />
           </Link>
         </span>
         <span>
           <Link href="https://github.com/AshwiniParaye1" target="_blank">
-            <AiOutlineGithub />
+            <AiOutlineGithub size={20} className="hover:text-gray-700" />
           </Link>
         </span>
         <span>
           <Link href="https://ashwini-paraye.medium.com/" target="_blank">
-            <FaMedium />
+            <AiFillMediumSquare size={20} className="hover:text-gray-700" />
           </Link>
         </span>
       </div>
