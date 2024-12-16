@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Experience</h1>
-      <li>
+      <li className="pl-2">
         <span className="font-semibold">
           Fullstack Developer | @ProjectBoard
         </span>

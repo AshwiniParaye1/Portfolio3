@@ -5,7 +5,7 @@ const GetInTouch = () => {
   return (
     <div>
       <h1 className="text-xl font-semibold mb-2">Get In Touch</h1>
-      <p>
+      <p className="pl-7">
         Interested in a conversation? Drop DM's over
         <span className="text-blue-500 hover:text-blue-700">
           <Link href="https://www.linkedin.com/in/ashwini-paraye/">
