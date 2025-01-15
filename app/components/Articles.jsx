@@ -45,7 +45,7 @@ const Articles = () => {
           </Link>
         </span>
       </li>
-      <p className="mt-2 pl-7 text-gray-500">
+      <p className="mt-2 pl-7 text-gray-500 text-justify">
         Check out more of my articles on{" "}
         <span className="text-blue-500 hover:text-blue-700">
           <Link href="https://medium.com/@ashwini-paraye" target="_blank">

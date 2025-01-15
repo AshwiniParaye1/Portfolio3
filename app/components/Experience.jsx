@@ -7,7 +7,7 @@ const Experience = () => {
       <li className="pl-2 text-gray-700">
         <span>Fullstack Developer | @ProjectBoard</span>
         <p className="pl-5 text-gray-700">June 2023 - May 2024 | Toronto, CA</p>
-        <p className="pl-5 text-gray-500">
+        <p className="pl-5 text-gray-500 text-justify">
           As a fullstack developer in ProjectBoard I developed applications
           using Vue.js and Golang, created REST APIs, implemented state
           management with Vuex and worked with the databases. I also

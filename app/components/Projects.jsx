@@ -51,7 +51,7 @@ const Projects = () => {
           </Link>
         </span>
       </li>
-      <p className="mt-2 pl-7 text-gray-500">
+      <p className="mt-2 pl-7 text-gray-500 text-justify">
         I actively build products like games and browser extensions, while also
         working on projects such as e-commerce platforms and AI-driven tools.
       </p>
