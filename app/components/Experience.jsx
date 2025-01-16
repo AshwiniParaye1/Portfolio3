@@ -16,6 +16,19 @@ const Experience = () => {
           debugging and optimization.
         </p>
       </li>
+      <li className="pl-2 pt-2 text-gray-700">
+        <span>Process Executive | @Infosys</span>
+        <p className="pl-5 text-gray-700">June 2021 - Nov 2022 | Pune, IN</p>
+        <p className="pl-5 text-gray-500 text-justify">
+          As a process executive in Infosys I developed frontend applications
+          using React, focusing on creating responsive and user-friendly
+          interfaces. Contributed to the development of dynamic dashboards,
+          enhancing data visualization and user engagement. Utilized Redux for
+          state management to ensure seamless data flow across the application.
+          Translated Figma designs into fully responsive and interactive user
+          interfaces.
+        </p>
+      </li>
     </div>
   );
 };
