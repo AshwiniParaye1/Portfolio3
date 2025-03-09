@@ -22,7 +22,7 @@ const Experience = () => {
         <span>Software Engineer | @Infosys</span>
         <p className="pl-5 text-gray-700">June 2021 - Nov 2022 | Pune, IN</p>
         <p className="pl-5 text-gray-500 text-justify">
-          As a process executive in Infosys I developed frontend applications
+          As a software engineer in Infosys I developed frontend applications
           using React, focusing on creating responsive and user-friendly
           interfaces. Contributed to the development of dynamic dashboards,
           enhancing data visualization and user engagement. Utilized Redux for
