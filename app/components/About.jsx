@@ -1,3 +1,5 @@
+//component/About.jsx
+
 import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";

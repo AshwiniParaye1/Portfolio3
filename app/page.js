@@ -1,3 +1,5 @@
+//app/page.js
+
 import React from "react";
 import About from "./components/About";
 import Experience from "./components/Experience";
