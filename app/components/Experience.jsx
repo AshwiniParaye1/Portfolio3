@@ -19,7 +19,7 @@ const Experience = () => {
         </p>
       </li>
       <li className="pl-2 pt-2 text-gray-700">
-        <span>Process Executive | @Infosys</span>
+        <span>Software Engineer | @Infosys</span>
         <p className="pl-5 text-gray-700">June 2021 - Nov 2022 | Pune, IN</p>
         <p className="pl-5 text-gray-500 text-justify">
           As a process executive in Infosys I developed frontend applications
