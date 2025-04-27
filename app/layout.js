@@ -1,21 +1,21 @@
-//app/layout.js
+// app/layout.js
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
-  subsets: ["latin"]
+  subsets: ["latin"],
 });
 
 export const metadata = {
   title: "Ashwini Paraye",
-  description: "Fullstack Developer"
+  description: "Fullstack Developer",
 };
 
 export default function RootLayout({ children }) {

@@ -1,4 +1,4 @@
-//component/Education.jsx
+//app/components/Education.jsx
 
 import React from "react";
 

@@ -1,4 +1,4 @@
-//component/Experience.jsx
+//app/components/Experience.jsx
 
 import React from "react";
 

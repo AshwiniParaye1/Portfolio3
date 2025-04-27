@@ -1,4 +1,4 @@
-// projects/page.jsx
+// app/projects/page.jsx
 
 "use client";
 
