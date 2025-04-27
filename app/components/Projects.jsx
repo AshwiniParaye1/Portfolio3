@@ -1,12 +1,39 @@
-//app/components/Projects.jsx
-
+// app/components/Projects.jsx
 "use client";
 
 import Link from "next/link";
 import React from "react";
 
+const ProjectItem = ({ title, liveLink, codeLink, description }) => (
+  <li className="pl-2 mb-4 text-gray-700 text-justify">
+    <div className="font-medium text-lg">{title}</div>
+    <div className="pl-2 text-blue-500">
+      {liveLink && (
+        <Link
+          href={liveLink}
+          target="_blank"
+          className="hover:text-blue-700 underline"
+        >
+          Live
+        </Link>
+      )}
+      {liveLink && codeLink && " | "}
+      {codeLink && (
+        <Link
+          href={codeLink}
+          target="_blank"
+          className="hover:text-blue-700 underline"
+        >
+          Source Code
+        </Link>
+      )}
+    </div>
+    <div className="pl-2 text-gray-500 mt-1">{description}</div>
+  </li>
+);
+
 const Projects = () => {
-  const initialProjects = [
+  const projects = [
     {
       title: "Cloud Drive",
       liveLink: "https://icloud-drive.vercel.app/sign-in/",
@@ -32,32 +59,8 @@ const Projects = () => {
     <div>
       <h1 className="text-xl mb-2 text-gray-700">Projects</h1>
       <ul className="list-disc pl-5">
-        {initialProjects.map((project, index) => (
-          <li key={index} className="pl-2 mb-4 text-gray-700 text-justify">
-            <div className="font-medium text-lg">{project.title}</div>
-            <div className="pl-2 text-blue-500">
-              {project.liveLink && (
-                <Link
-                  href={project.liveLink}
-                  target="_blank"
-                  className="hover:text-blue-700 underline"
-                >
-                  Live
-                </Link>
-              )}
-              {project.liveLink && project.codeLink && " | "}
-              {project.codeLink && (
-                <Link
-                  href={project.codeLink}
-                  target="_blank"
-                  className="hover:text-blue-700 underline"
-                >
-                  Source Code
-                </Link>
-              )}
-            </div>
-            <div className="pl-2 text-gray-500 mt-1">{project.description}</div>
-          </li>
+        {projects.map((project, index) => (
+          <ProjectItem key={index} {...project} />
         ))}
       </ul>
 

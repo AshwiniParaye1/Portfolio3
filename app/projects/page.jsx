@@ -87,7 +87,7 @@ const ProjectsPage = () => {
 
       <div className="pl-7 text-gray-500 text-justify">
         <p>
-          Want to see even more? Check out {""}
+          Want to see more projects? Check out {""}
           <Link
             href="https://github.com/AshwiniParaye1"
             target="_blank"

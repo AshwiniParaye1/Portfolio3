@@ -1,5 +1,4 @@
-//app/components/GetInTouch.jsx
-
+// app/components/GetInTouch.jsx
 import Link from "next/link";
 import React from "react";
 
