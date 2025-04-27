@@ -1,4 +1,4 @@
-//app/components/About.jsx
+//app/components/Articles.jsx
 
 import Link from "next/link";
 import React from "react";
