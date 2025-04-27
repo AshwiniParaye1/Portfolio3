@@ -33,7 +33,7 @@ const Articles = () => {
             href="https://blog.stackademic.com/what-does-enumerable-mean-in-javascript-explained-simply-b3e52d00f621"
             target="_blank"
           >
-            What Does Enumerable Mean in JavaScript?
+            Understanding Browser Storage
           </Link>
         </span>
       </li>

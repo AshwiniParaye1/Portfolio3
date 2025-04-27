@@ -9,7 +9,7 @@ const Education = () => {
       <li className="pl-2 text-gray-500">
         <span className=" text-gray-700">Master of Science - 2022</span>
         <p className="pl-5 text-gray-500">
-          Marathwada Institute of Technology, Sambhajinagar
+          Marathwada Institute of Technology, Sambhajinagar, MH.
         </p>
       </li>
     </div>

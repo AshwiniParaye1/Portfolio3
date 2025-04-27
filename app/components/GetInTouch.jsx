@@ -8,18 +8,19 @@ const GetInTouch = () => {
     <div>
       <h1 className="text-xl mb-2 text-gray-700">Get In Touch</h1>
       <p className="pl-7 text-gray-500 text-justify">
-        Interested in a conversation? Drop DM's over
+        I'd love to hear from you. Whether you have a question or just want to
+        talk about tech, my work, projects, or anything else you'd like. Just
+        Drop a message over{" "}
         <span className="text-blue-500 hover:text-blue-700">
           <Link href="https://www.linkedin.com/in/ashwini-paraye/">
             {" "}
-            linkedin{" "}
+            Linkedin{" "}
           </Link>
         </span>
         or{" "}
         <span className="text-blue-500 hover:text-blue-700">
-          <Link href="mailto:ashwiniparaye1@gmail.com"> email. </Link>
+          <Link href="mailto:ashwiniparaye1@gmail.com"> Email. </Link>
         </span>
-        Ask me anything about my work, my projects, or anything else you'd like.
       </p>
     </div>
   );

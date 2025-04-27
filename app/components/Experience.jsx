@@ -18,7 +18,7 @@ const Experience = () => {
           debugging and optimization.
         </p>
       </li>
-      <li className="pl-2 pt-2 text-gray-700">
+      <li className="pl-2 pt-4 text-gray-700">
         <span>Software Engineer | @Infosys</span>
         <p className="pl-5 text-gray-700">June 2021 - Nov 2022 | Pune, IN</p>
         <p className="pl-5 text-gray-500 text-justify">
