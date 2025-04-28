@@ -5,30 +5,24 @@ import Link from "next/link";
 import React from "react";
 
 const ProjectItem = ({ title, liveLink, codeLink, description }) => (
-  <li className="pl-2 mb-4 text-gray-700 text-justify">
+  <li className="pl-2 mb-4 text-black dark:text-white text-justify">
     <div className="font-medium text-lg">{title}</div>
-    <div className="pl-2 text-blue-500">
+    <div className="pl-2 text-blue-600 dark:text-blue-400">
       {liveLink && (
-        <Link
-          href={liveLink}
-          target="_blank"
-          className="hover:text-blue-700 underline"
-        >
+        <Link href={liveLink} target="_blank" className="hover:underline">
           Live
         </Link>
       )}
       {liveLink && codeLink && " | "}
       {codeLink && (
-        <Link
-          href={codeLink}
-          target="_blank"
-          className="hover:text-blue-700 underline"
-        >
+        <Link href={codeLink} target="_blank" className="hover:underline">
           Source Code
         </Link>
       )}
     </div>
-    <div className="pl-2 text-gray-500 mt-1">{description}</div>
+    <div className="pl-2 text-gray-600 dark:text-gray-300 mt-1">
+      {description}
+    </div>
   </li>
 );
 
@@ -57,7 +51,7 @@ const Projects = () => {
 
   return (
     <div>
-      <h1 className="text-xl mb-2 text-gray-700">Projects</h1>
+      <h1 className="text-xl mb-2 text-black dark:text-white">Projects</h1>
       <ul className="list-disc pl-5">
         {projects.map((project, index) => (
           <ProjectItem key={index} {...project} />
@@ -67,13 +61,13 @@ const Projects = () => {
       <div className="pl-2 mt-3">
         <Link
           href="/projects"
-          className="text-blue-600 hover:text-blue-800 underline"
+          className="text-blue-600 dark:text-blue-400 hover:underline"
         >
           See More Projects
         </Link>
       </div>
 
-      <p className="mt-4 pl-7 text-gray-500 text-justify">
+      <p className="mt-4 pl-7 text-gray-600 dark:text-gray-300 text-justify">
         I actively build products like games and browser extensions, while also
         working on projects such as e-commerce platforms and AI-driven tools.
       </p>

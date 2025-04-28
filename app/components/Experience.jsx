@@ -30,15 +30,19 @@ const Experience = () => {
 
   return (
     <div>
-      <h1 className="text-xl mb-2 text-gray-700">Experience</h1>
+      <h1 className="text-xl mb-2 text-black dark:text-white">Experience</h1>
       {experiences.map((job, index) => (
         <li
           key={index}
-          className={`pl-2 ${index > 0 ? "pt-4" : ""} text-gray-700`}
+          className={`pl-2 ${
+            index > 0 ? "pt-4" : ""
+          } text-black dark:text-white`}
         >
           <span>{job.title}</span>
-          <p className="pl-5 text-gray-700">{job.period}</p>
-          <p className="pl-5 text-gray-500 text-justify">{job.description}</p>
+          <p className="pl-5 text-black dark:text-white">{job.period}</p>
+          <p className="pl-5 text-gray-600 dark:text-gray-300 text-justify">
+            {job.description}
+          </p>
         </li>
       ))}
     </div>

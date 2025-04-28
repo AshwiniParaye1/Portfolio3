@@ -1,23 +1,26 @@
+/* app/globals.css */
 @import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Base theme (light) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme */
+.dark {
+  color-scheme: dark;
 }
 
+/* Apply theme colors */
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply bg-white text-black;
   font-family: "Sour Gummy", sans-serif;
+}
+
+.dark body {
+  @apply bg-black text-white;
 }

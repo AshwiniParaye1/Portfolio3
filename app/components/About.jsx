@@ -12,7 +12,10 @@ import { CgNotes } from "react-icons/cg";
 
 const SocialLink = ({ href, icon: Icon, external = true }) => (
   <Link href={href} target={external ? "_blank" : undefined}>
-    <Icon size={20} className="hover:text-gray-700" />
+    <Icon
+      size={20}
+      className="text-gray-800 dark:text-gray-200 hover:opacity-80"
+    />
   </Link>
 );
 
@@ -37,8 +40,10 @@ const About = () => {
 
   return (
     <div>
-      <h1 className="text-xl text-gray-700 mb-2">Ashwini Paraye</h1>
-      <div className="text-sm text-gray-500 mt-1 mb-6 flex flex-row gap-3">
+      <h1 className="text-xl text-black dark:text-white mb-2">
+        Ashwini Paraye
+      </h1>
+      <div className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row gap-3">
         {socialLinks.map((link, index) => (
           <div key={index}>
             <SocialLink
@@ -49,7 +54,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <p className="pl-7 text-gray-500 text-justify">
+      <p className="pl-7 text-gray-600 dark:text-gray-300 text-justify">
         I am Ashwini Paraye, a passionate Full Stack Developer with a love for
         writing, based in the vibrant world of technology. With expertise in
         both front-end and back-end development, I craft seamless, user-focused

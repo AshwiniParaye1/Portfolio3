@@ -1,10 +1,10 @@
 // app/projects/page.jsx
-
 "use client";
 
 import Link from "next/link";
 import React from "react";
 import { MdArrowBackIosNew } from "react-icons/md";
+import ThemeToggle from "../components/ThemeToggle";
 
 const ProjectsPage = () => {
   const moreProjects = [
@@ -43,25 +43,34 @@ const ProjectsPage = () => {
   ];
 
   return (
-    <div className="bg-white flex flex-col xl:pl-80 xl:pr-80 lg:pl-60 lg:pr-60 md:pl-48 md:pr-48 sm:pl-36 sm:pr-36 h-full p-16 gap-10 overflow-hidden">
-      <div className="flex items-center gap-3 pl-2">
-        <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
-          <MdArrowBackIosNew />
-        </Link>
-        <h1 className="text-xl text-gray-700">Projects</h1>
+    <div className="bg-white dark:bg-black text-black dark:text-white flex flex-col xl:pl-80 xl:pr-80 lg:pl-60 lg:pr-60 md:pl-48 md:pr-48 sm:pl-36 sm:pr-36 h-full p-16 gap-10 overflow-hidden">
+      <div className="flex justify-between items-center mb-4">
+        <div className="flex items-center gap-3 pl-2">
+          <Link
+            href="/"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            <MdArrowBackIosNew />
+          </Link>
+          <h1 className="text-xl text-black dark:text-white">Projects</h1>
+        </div>
+        <ThemeToggle />
       </div>
 
       <section>
         <ul className="list-disc pl-5">
           {moreProjects.map((project, index) => (
-            <li key={index} className="pl-2 mb-4 text-gray-700 text-justify">
+            <li
+              key={index}
+              className="pl-2 mb-4 text-black dark:text-white text-justify"
+            >
               <div className="font-medium text-lg">{project.title}</div>
-              <div className="pl-2 text-blue-500">
+              <div className="pl-2 text-blue-600 dark:text-blue-400">
                 {project.liveLink && (
                   <Link
                     href={project.liveLink}
                     target="_blank"
-                    className="hover:text-blue-700 underline"
+                    className="hover:underline"
                   >
                     Live
                   </Link>
@@ -71,13 +80,13 @@ const ProjectsPage = () => {
                   <Link
                     href={project.codeLink}
                     target="_blank"
-                    className="hover:text-blue-700 underline"
+                    className="hover:underline"
                   >
                     Source Code
                   </Link>
                 )}
               </div>
-              <div className="pl-2 text-gray-500 mt-1">
+              <div className="pl-2 text-gray-600 dark:text-gray-300 mt-1">
                 {project.description}
               </div>
             </li>
@@ -85,13 +94,13 @@ const ProjectsPage = () => {
         </ul>
       </section>
 
-      <div className="pl-7 text-gray-500 text-justify">
+      <div className="pl-7 text-gray-600 dark:text-gray-300 text-justify">
         <p>
           Want to see more projects? Check out {""}
           <Link
             href="https://github.com/AshwiniParaye1"
             target="_blank"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
           >
             GitHub!
           </Link>

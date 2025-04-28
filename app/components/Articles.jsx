@@ -24,11 +24,11 @@ const Articles = () => {
 
   return (
     <div>
-      <h1 className="text-xl mb-2 text-gray-700">Articles</h1>
+      <h1 className="text-xl mb-2 text-black dark:text-white">Articles</h1>
       <ul>
         {articles.map((article, index) => (
-          <li key={index} className="pl-2 text-gray-500">
-            <span className="text-blue-500 hover:text-blue-700">
+          <li key={index} className="pl-2 text-gray-600 dark:text-gray-300">
+            <span className="text-blue-600 dark:text-blue-400 hover:underline">
               <Link href={article.url} target="_blank">
                 {article.title}
               </Link>
@@ -36,9 +36,9 @@ const Articles = () => {
           </li>
         ))}
       </ul>
-      <p className="mt-2 pl-7 text-gray-500 text-justify">
+      <p className="mt-2 pl-7 text-gray-600 dark:text-gray-300 text-justify">
         Check out more of my articles on{" "}
-        <span className="text-blue-500 hover:text-blue-700">
+        <span className="text-blue-600 dark:text-blue-400 hover:underline">
           <Link href="https://medium.com/@ashwini-paraye" target="_blank">
             Medium
           </Link>
