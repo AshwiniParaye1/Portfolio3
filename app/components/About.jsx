@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import { RiLinkedinBoxLine } from "react-icons/ri";
 import { CgNotes } from "react-icons/cg";
+import ThemeToggle from "./ThemeToggle";
 
 const SocialLink = ({ href, icon: Icon, external = true }) => (
   <Link href={href} target={external ? "_blank" : undefined}>
@@ -40,9 +41,12 @@ const About = () => {
 
   return (
     <div>
-      <h1 className="text-xl text-black dark:text-white mb-2">
-        Ashwini Paraye
-      </h1>
+      <div className="flex flex-row justify-between ">
+        <h1 className="text-xl text-black dark:text-white mb-2">
+          Ashwini Paraye
+        </h1>
+        <ThemeToggle />
+      </div>
       <div className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row gap-3">
         {socialLinks.map((link, index) => (
           <div key={index}>
