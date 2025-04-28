@@ -34,7 +34,7 @@ const About = () => {
     { href: "https://github.com/AshwiniParaye1", icon: AiOutlineGithub },
     { href: "https://ashwini-paraye.medium.com/", icon: AiFillMediumSquare },
     {
-      href: "https://drive.google.com/uc?export=download&id=1Dqhha3QLvlqH29xQTF0XwgTEPs4_2rLH",
+      href: "https://ggl.link/5RVXb05",
       icon: CgNotes,
     },
   ];
