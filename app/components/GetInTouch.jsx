@@ -6,7 +6,7 @@ const GetInTouch = () => {
   return (
     <div>
       <h1 className="text-xl mb-2 text-black dark:text-white">Get In Touch</h1>
-      <p className="pl-7 text-gray-600 dark:text-gray-300 text-justify">
+      <p className="text-gray-600 dark:text-gray-300 text-justify">
         I'd love to hear from you. Whether you have a question or just want to
         talk about tech, my work, projects, or anything else you'd like. Just
         Drop a message over{" "}

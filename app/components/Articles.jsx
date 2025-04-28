@@ -14,7 +14,7 @@ const Articles = () => {
     },
     {
       title: "Understanding Browser Storage",
-      url: "https://blog.stackademic.com/what-does-enumerable-mean-in-javascript-explained-simply-b3e52d00f621",
+      url: "https://medium.com/stackademic/understanding-browser-storage-a9883d82f6ba",
     },
     {
       title: "Understanding the Basics of Next.js",
@@ -25,9 +25,9 @@ const Articles = () => {
   return (
     <div>
       <h1 className="text-xl mb-2 text-black dark:text-white">Articles</h1>
-      <ul>
+      <ul className="list-disc pl-4">
         {articles.map((article, index) => (
-          <li key={index} className="pl-2 text-gray-600 dark:text-gray-300">
+          <li key={index} className="mb-1 text-gray-600 dark:text-gray-300">
             <span className="text-blue-600 dark:text-blue-400 hover:underline">
               <Link href={article.url} target="_blank">
                 {article.title}
@@ -36,7 +36,7 @@ const Articles = () => {
           </li>
         ))}
       </ul>
-      <p className="mt-2 pl-7 text-gray-600 dark:text-gray-300 text-justify">
+      <p className="mt-2 text-gray-600 dark:text-gray-300 text-justify">
         Check out more of my articles on{" "}
         <span className="text-blue-600 dark:text-blue-400 hover:underline">
           <Link href="https://medium.com/@ashwini-paraye" target="_blank">

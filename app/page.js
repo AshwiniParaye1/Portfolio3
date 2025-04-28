@@ -1,5 +1,4 @@
 // app/page.js
-
 "use client";
 
 import React from "react";
@@ -9,7 +8,6 @@ import Projects from "./components/Projects";
 import Articles from "./components/Articles";
 import GetInTouch from "./components/GetInTouch";
 import Education from "./components/Education";
-import ThemeToggle from "./components/ThemeToggle";
 
 const Page = () => {
   return (

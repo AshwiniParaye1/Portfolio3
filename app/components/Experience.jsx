@@ -31,20 +31,20 @@ const Experience = () => {
   return (
     <div>
       <h1 className="text-xl mb-2 text-black dark:text-white">Experience</h1>
-      {experiences.map((job, index) => (
-        <li
-          key={index}
-          className={`pl-2 ${
-            index > 0 ? "pt-4" : ""
-          } text-black dark:text-white`}
-        >
-          <span>{job.title}</span>
-          <p className="pl-5 text-black dark:text-white">{job.period}</p>
-          <p className="pl-5 text-gray-600 dark:text-gray-300 text-justify">
-            {job.description}
-          </p>
-        </li>
-      ))}
+      <ul className="list-disc pl-4">
+        {experiences.map((job, index) => (
+          <li
+            key={index}
+            className={`${index > 0 ? "mt-4" : ""} text-black dark:text-white`}
+          >
+            <span>{job.title}</span>
+            <p className="text-black dark:text-white">{job.period}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-justify mt-1">
+              {job.description}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

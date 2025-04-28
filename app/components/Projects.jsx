@@ -5,9 +5,9 @@ import Link from "next/link";
 import React from "react";
 
 const ProjectItem = ({ title, liveLink, codeLink, description }) => (
-  <li className="pl-2 mb-4 text-black dark:text-white text-justify">
+  <li className="mb-4 text-black dark:text-white text-justify">
     <div className="font-medium text-lg">{title}</div>
-    <div className="pl-2 text-blue-600 dark:text-blue-400">
+    <div className="text-blue-600 dark:text-blue-400">
       {liveLink && (
         <Link href={liveLink} target="_blank" className="hover:underline">
           Live
@@ -20,9 +20,7 @@ const ProjectItem = ({ title, liveLink, codeLink, description }) => (
         </Link>
       )}
     </div>
-    <div className="pl-2 text-gray-600 dark:text-gray-300 mt-1">
-      {description}
-    </div>
+    <div className="text-gray-600 dark:text-gray-300 mt-1">{description}</div>
   </li>
 );
 
@@ -52,13 +50,13 @@ const Projects = () => {
   return (
     <div>
       <h1 className="text-xl mb-2 text-black dark:text-white">Projects</h1>
-      <ul className="list-disc pl-5">
+      <ul className="list-disc pl-4">
         {projects.map((project, index) => (
           <ProjectItem key={index} {...project} />
         ))}
       </ul>
 
-      <div className="pl-2 mt-3">
+      <div className="mt-3">
         <Link
           href="/projects"
           className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -67,7 +65,7 @@ const Projects = () => {
         </Link>
       </div>
 
-      <p className="mt-4 pl-7 text-gray-600 dark:text-gray-300 text-justify">
+      <p className="mt-4 text-gray-600 dark:text-gray-300 text-justify">
         I actively build products like games and browser extensions, while also
         working on projects such as e-commerce platforms and AI-driven tools.
       </p>

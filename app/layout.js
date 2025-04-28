@@ -1,5 +1,4 @@
 // app/layout.js
-
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";

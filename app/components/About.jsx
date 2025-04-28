@@ -41,7 +41,7 @@ const About = () => {
 
   return (
     <div>
-      <div className="flex flex-row justify-between ">
+      <div className="flex flex-row justify-between">
         <h1 className="text-xl text-black dark:text-white mb-2">
           Ashwini Paraye
         </h1>
@@ -58,7 +58,7 @@ const About = () => {
           </div>
         ))}
       </div>
-      <p className="pl-7 text-gray-600 dark:text-gray-300 text-justify">
+      <p className="text-gray-600 dark:text-gray-300 text-justify">
         I am Ashwini Paraye, a passionate Full Stack Developer with a love for
         writing, based in the vibrant world of technology. With expertise in
         both front-end and back-end development, I craft seamless, user-focused

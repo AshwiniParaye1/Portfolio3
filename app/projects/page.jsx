@@ -45,7 +45,7 @@ const ProjectsPage = () => {
   return (
     <div className="bg-white dark:bg-black text-black dark:text-white flex flex-col xl:pl-80 xl:pr-80 lg:pl-60 lg:pr-60 md:pl-48 md:pr-48 sm:pl-36 sm:pr-36 h-full p-16 gap-10 overflow-hidden">
       <div className="flex justify-between items-center mb-4">
-        <div className="flex items-center gap-3 pl-2">
+        <div className="flex items-center gap-3">
           <Link
             href="/"
             className="text-blue-600 dark:text-blue-400 hover:underline"
@@ -58,14 +58,14 @@ const ProjectsPage = () => {
       </div>
 
       <section>
-        <ul className="list-disc pl-5">
+        <ul className="list-disc pl-4">
           {moreProjects.map((project, index) => (
             <li
               key={index}
-              className="pl-2 mb-4 text-black dark:text-white text-justify"
+              className="mb-4 text-black dark:text-white text-justify"
             >
               <div className="font-medium text-lg">{project.title}</div>
-              <div className="pl-2 text-blue-600 dark:text-blue-400">
+              <div className="text-blue-600 dark:text-blue-400">
                 {project.liveLink && (
                   <Link
                     href={project.liveLink}
@@ -86,7 +86,7 @@ const ProjectsPage = () => {
                   </Link>
                 )}
               </div>
-              <div className="pl-2 text-gray-600 dark:text-gray-300 mt-1">
+              <div className="text-gray-600 dark:text-gray-300 mt-1">
                 {project.description}
               </div>
             </li>
@@ -94,7 +94,7 @@ const ProjectsPage = () => {
         </ul>
       </section>
 
-      <div className="pl-7 text-gray-600 dark:text-gray-300 text-justify">
+      <div className="text-gray-600 dark:text-gray-300 text-justify">
         <p>
           Want to see more projects? Check out {""}
           <Link
