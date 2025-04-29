@@ -37,8 +37,10 @@ const Experience = () => {
             key={index}
             className={`${index > 0 ? "mt-4" : ""} text-black dark:text-white`}
           >
-            <span>{job.title}</span>
-            <p className="text-black dark:text-white">{job.period}</p>
+            <span className="font-medium">{job.title}</span>
+            <p className="text-black dark:text-white font-light">
+              {job.period}
+            </p>
             <p className="text-gray-600 dark:text-gray-300 text-justify mt-1">
               {job.description}
             </p>
