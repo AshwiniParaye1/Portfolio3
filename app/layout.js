@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 
 export const metadata = {
   title: {
-    default: "Ashwini Paraye - Fullstack Developer Portfolio",
+    default: "Ashwini Paraye - Fullstack Developer",
     template: "%s | Ashwini Paraye",
   },
   description: "Ashwini Paraye's - Fullstack Developer.",
@@ -20,13 +20,13 @@ export const metadata = {
   ],
   authors: [{ name: "Ashwini Paraye" }],
   openGraph: {
-    title: "Ashwini Paraye - Fullstack Developer Portfolio",
+    title: "Ashwini Paraye - Fullstack Developer",
     description: "Ashwini Paraye's - Fullstack Developer.",
     url: "https://ashwiniparaye.in/",
     siteName: "Ashwini Paraye Portfolio",
     images: [
       {
-        url: "https://ashwiniparaye.in/og-image.jpg",
+        url: "https://ashwiniparaye.in/ashwini-profile.JPG",
         width: 1200,
         height: 630,
         alt: "Ashwini Paraye Portfolio",
@@ -36,11 +36,11 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Ashwini Paraye - Fullstack Developer Portfolio",
+    card: "ashwini-profile",
+    title: "Ashwini Paraye - Fullstack Developer",
     description: "Ashwini Paraye's - Fullstack Developer.",
-    creator: "@yourtwitterhandle",
-    images: ["https://ashwiniparaye.in/twitter-image.jpg"],
+    creator: "@AshwiniParaye",
+    images: ["https://ashwiniparaye.in/ashwini-profile.JPG"],
   },
   robots: {
     index: true,
