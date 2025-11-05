@@ -1,3 +1,5 @@
+//app/layout.js
+
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 import { cookies } from "next/headers";
