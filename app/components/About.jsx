@@ -11,54 +11,73 @@ import { RiLinkedinBoxLine } from "react-icons/ri";
 import { CgNotes } from "react-icons/cg";
 import ThemeToggle from "./ThemeToggle";
 
-const SocialLink = ({ href, icon: Icon, external = true }) => (
-  <Link href={href} target={external ? "_blank" : undefined}>
+const SocialLink = ({ href, icon: Icon, label, external = true }) => (
+  <Link
+    href={href}
+    target={external ? "_blank" : undefined}
+    rel={external ? "noopener noreferrer" : undefined}
+    aria-label={label}
+  >
     <Icon
       size={20}
-      className="text-gray-800 dark:text-gray-200 hover:opacity-80"
+      className="text-gray-800 dark:text-gray-200 hover:opacity-80 transition-opacity duration-200"
     />
   </Link>
 );
 
 const About = () => {
-  const socialLinks = [
-    {
-      href: "mailto:ashwiniparaye1@gmail.com",
-      icon: AiOutlineMail,
-      external: false,
-    },
-    {
-      href: "https://www.linkedin.com/in/ashwini-paraye/",
-      icon: RiLinkedinBoxLine,
-    },
-    { href: "https://github.com/AshwiniParaye1", icon: AiOutlineGithub },
-    { href: "https://ashwini-paraye.medium.com/", icon: AiFillMediumSquare },
-    {
-      href: "https://ggl.link/5RVXb05",
-      icon: CgNotes,
-    },
-  ];
+  const socialLinks = React.useMemo(
+    () => [
+      {
+        href: "mailto:ashwiniparaye1@gmail.com",
+        icon: AiOutlineMail,
+        label: "Email Ashwini Paraye",
+        external: false,
+      },
+      {
+        href: "https://dub.sh/ashwini-linkedin",
+        icon: RiLinkedinBoxLine,
+        label: "Ashwini Paraye on LinkedIn",
+      },
+      {
+        href: "https://git.new/ashwini",
+        icon: AiOutlineGithub,
+        label: "Ashwini Paraye on GitHub",
+      },
+      {
+        href: "https://dub.sh/ashwini-paraye",
+        icon: AiFillMediumSquare,
+        label: "Ashwini Paraye on Medium",
+      },
+      {
+        href: "https://ggl.link/ashwini-paraye-resume",
+        icon: CgNotes,
+        label: "Ashwini Paraye's Resume",
+      },
+    ],
+    []
+  );
 
   return (
-    <div>
-      <div className="flex flex-row justify-between">
-        <h1 className="text-xl text-black dark:text-white mb-2">
+    <section aria-labelledby="about-heading">
+      <div className="flex flex-row justify-between items-center mb-2">
+        <h1 id="about-heading" className="text-xl text-black dark:text-white">
           Ashwini Paraye
         </h1>
         <ThemeToggle />
       </div>
       <div className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row gap-3">
-        {socialLinks.map((link, index) => (
-          <div key={index}>
-            <SocialLink
-              href={link.href}
-              icon={link.icon}
-              external={link.external}
-            />
-          </div>
+        {socialLinks.map((link) => (
+          <SocialLink
+            key={link.href}
+            href={link.href}
+            icon={link.icon}
+            label={link.label}
+            external={link.external}
+          />
         ))}
       </div>
-      <p className="text-gray-600 dark:text-gray-300 text-justify">
+      <p className="text-gray-600 dark:text-gray-300 text-justify leading-relaxed">
         I am Ashwini Paraye, a passionate Full Stack Developer with a love for
         writing, based in the vibrant world of technology. With expertise in
         both front-end and back-end development, I craft seamless, user-focused
@@ -66,7 +85,7 @@ const About = () => {
         through writing. Let's collaborate to bring your ideas to life with
         innovative solutions and engaging content.
       </p>
-    </div>
+    </section>
   );
 };
 

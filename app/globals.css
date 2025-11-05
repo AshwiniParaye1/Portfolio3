@@ -14,10 +14,13 @@
   color-scheme: dark;
 }
 
-/* Apply theme colors */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-white text-black;
-  /* font-family: "Sour Gummy"; */
 }
 
 .dark body {

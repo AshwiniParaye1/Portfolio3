@@ -1,43 +1,50 @@
 // app/context/ThemeContext.jsx
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+} from "react";
+import Cookies from "js-cookie";
 
-const ThemeContext = createContext();
+const ThemeContext = createContext(undefined);
 
-export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+const THEME_COOKIE_NAME = "app-theme";
 
-  // Initialize theme from localStorage or system preference
+// ThemeProvider now accepts an initialIsDark prop from the server
+export const ThemeProvider = ({ children, initialIsDark }) => {
+  // Initialize state directly with the prop passed from the server
+  // This ensures hydration consistency.
+  const [isDark, setIsDark] = useState(initialIsDark);
+
+  // This effect synchronizes the `<html>` class and the cookie when `isDark` state changes
   useEffect(() => {
-    // Check if localStorage is available (client-side only)
     if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-
-      if (savedTheme === "dark") {
-        setIsDark(true);
+      if (isDark) {
         document.documentElement.classList.add("dark");
-      } else if (
-        savedTheme === null &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        setIsDark(true);
-        document.documentElement.classList.add("dark");
+        // Expires in 1 year, set samesite and secure for production
+        Cookies.set(THEME_COOKIE_NAME, "dark", {
+          expires: 365,
+          sameSite: "Lax",
+          secure: process.env.NODE_ENV === "production",
+        });
+      } else {
+        document.documentElement.classList.remove("dark");
+        Cookies.set(THEME_COOKIE_NAME, "light", {
+          expires: 365,
+          sameSite: "Lax",
+          secure: process.env.NODE_ENV === "production",
+        });
       }
     }
-  }, []);
+  }, [isDark]); // Dependency on isDark
 
-  const toggleTheme = () => {
-    if (isDark) {
-      setIsDark(false);
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
+  const toggleTheme = useCallback(() => {
+    setIsDark((prevIsDark) => !prevIsDark);
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>

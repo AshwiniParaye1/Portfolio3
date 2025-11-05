@@ -3,11 +3,16 @@ import React from "react";
 
 const Education = () => {
   return (
-    <div>
-      <h1 className="text-xl mb-2 text-black dark:text-white">Education</h1>
+    <section aria-labelledby="education-heading">
+      <h1
+        id="education-heading"
+        className="text-xl mb-2 text-black dark:text-white"
+      >
+        Education
+      </h1>
       <ul className="list-disc pl-4">
         <li className="text-gray-600 dark:text-gray-300">
-          <span className="text-black dark:text-white">
+          <span className="text-black dark:text-white font-medium">
             Master of Science - 2022
           </span>
           <p className="mt-1">
@@ -15,7 +20,7 @@ const Education = () => {
           </p>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 
