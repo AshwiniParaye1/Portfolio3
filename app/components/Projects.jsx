@@ -44,11 +44,11 @@ const Projects = () => {
   const projects = React.useMemo(
     () => [
       {
-        title: "Cloud Drive",
-        liveLink: "https://icloud-drive.vercel.app/sign-in/",
-        codeLink: "https://github.com/AshwiniParaye1/CloudDrive",
+        title: "CSV Chatbot",
+        liveLink: "https://csv-chatbot-33xk.vercel.app/",
+        codeLink: "https://github.com/AshwiniParaye1/CSV-Chatbot",
         description:
-          "A cloud storage web app to upload, manage, and share files securely.",
+          "A CSV chatbot that lets users ask questions and get answers from CSV files.",
       },
       {
         title: "Github Readme Generator",

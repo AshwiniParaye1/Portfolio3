@@ -46,6 +46,13 @@ const ProjectsPage = () => {
   const moreProjects = React.useMemo(
     () => [
       {
+        title: "Cloud Drive",
+        liveLink: "https://icloud-drive.vercel.app/sign-in/",
+        codeLink: "https://github.com/AshwiniParaye1/CloudDrive",
+        description:
+          "A cloud storage web app to upload, manage, and share files securely.",
+      },
+      {
         title: "Github Issue Tracker",
         liveLink: "https://issue-trackerr1.vercel.app/",
         codeLink: "https://github.com/AshwiniParaye1/Issue-Tracker",
