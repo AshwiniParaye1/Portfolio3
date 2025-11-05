@@ -4,16 +4,6 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
-
 export const metadata = {
   title: "Ashwini Paraye",
   description: "Fullstack Developer",
