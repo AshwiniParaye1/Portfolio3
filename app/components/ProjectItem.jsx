@@ -6,8 +6,8 @@ import React from "react";
 
 const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
   <li
-    className="mb-6 p-4 -mx-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800
-               transition-colors duration-200"
+    // Added padding and negative margin to make room for the border
+    className="mb-6 py-4 px-4 -mx-4 relative animated-border-hover"
   >
     <h3 className="font-semibold text-lg sm:text-xl text-black dark:text-white">
       {title}
