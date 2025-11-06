@@ -1,8 +1,7 @@
 // app/components/Articles.jsx
-// app/components/Articles.jsx
 import Link from "next/link";
 import React from "react";
-import ArticleItem from "./ArticleItem"; // Import the shared component
+import ArticleItem from "./ArticleItem";
 
 const Articles = () => {
   const articles = React.useMemo(
@@ -28,29 +27,31 @@ const Articles = () => {
   );
 
   return (
-    <section aria-labelledby="articles-heading" className="mb-8 md:mb-12">
+    <section aria-labelledby="articles-heading" className="mb-6 md:mb-8">
+      {" "}
+      {/* Reduced bottom margin */}
       <h2
         id="articles-heading"
-        className="text-xl sm:text-2xl font-semibold mb-4 text-black dark:text-white"
+        className="text-lg sm:text-xl font-semibold mb-3 text-black dark:text-white" // Reduced font size, margin
       >
         Articles
       </h2>
       <ul className="list-none pl-0">
-        {" "}
-        {/* Changed from list-disc to list-none */}
         {articles.map((article) => (
           <ArticleItem key={article.url} {...article} />
         ))}
       </ul>
-      <p className="mt-4 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
+      <p className="mt-3 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-sm">
+        {" "}
+        {/* Reduced font size, margin */}
         Check out more of my articles on{" "}
         <Link
           href="https://medium.com/@ashwini-paraye"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-800 dark:text-gray-200 font-medium
+          className="text-gray-800 dark:text-gray-200 font-medium text-sm
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm"
+                     focus:ring-blue-500 rounded-sm" // Reduced font size
           aria-label="Ashwini Paraye's Medium profile"
         >
           Medium

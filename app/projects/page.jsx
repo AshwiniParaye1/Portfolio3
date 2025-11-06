@@ -60,11 +60,15 @@ const ProjectsPage = () => {
   return (
     <div
       className="bg-white dark:bg-black text-black dark:text-white flex flex-col
-                 px-8 md:px-16 lg:px-24 xl:px-48 py-10 sm:py-12 md:py-16 gap-8
-                 min-h-screen max-w-screen-xl mx-auto" // Adjusted padding and max-width
+                 px-6 md:px-12 lg:px-20 xl:px-36 py-8 sm:py-10 md:py-12 gap-6
+                 min-h-screen max-w-screen-xl mx-auto" // Reduced padding and gap
     >
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex items-center gap-3">
+      <div className="flex justify-between items-center mb-3">
+        {" "}
+        {/* Reduced bottom margin */}
+        <div className="flex items-center gap-2">
+          {" "}
+          {/* Reduced gap */}
           <Link
             href="/"
             className="text-gray-800 dark:text-gray-200 hover:opacity-70
@@ -72,11 +76,12 @@ const ProjectsPage = () => {
                        focus:ring-2 focus:ring-blue-500 rounded-sm"
             aria-label="Go back to home page"
           >
-            <MdArrowBackIosNew size={20} />
+            <MdArrowBackIosNew size={18} /> {/* Reduced icon size */}
           </Link>
           <h1 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
             Projects
-          </h1>
+          </h1>{" "}
+          {/* Reduced font size */}
         </div>
         <ThemeToggle />
       </div>
@@ -92,16 +97,18 @@ const ProjectsPage = () => {
         </ul>
       </section>
 
-      <div className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-base">
+      <div
+        className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-sm" // Reduced font size
+      >
         <p>
           Want to see more projects? Check out{" "}
           <Link
             href="https://github.com/AshwiniParaye1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 dark:text-gray-200 font-medium
+            className="text-gray-800 dark:text-gray-200 font-medium text-sm
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm"
+                     focus:ring-blue-500 rounded-sm" // Reduced font size
             aria-label="Ashwini Paraye's GitHub profile"
           >
             GitHub!

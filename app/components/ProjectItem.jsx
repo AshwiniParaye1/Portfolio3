@@ -6,15 +6,15 @@ import React from "react";
 
 const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
   <li
-    // Added padding and negative margin to make room for the border
-    className="mb-6 py-4 px-4 -mx-4 relative animated-border-hover"
+    className="mb-6 py-2 px-3 -mx-3 relative animated-border-hover" // Reduced padding and negative margin
   >
-    <h3 className="font-semibold text-lg sm:text-xl text-black dark:text-white">
+    <h3 className="font-semibold text-base sm:text-lg text-black dark:text-white">
       {title}
-    </h3>
+    </h3>{" "}
+    {/* Reduced font size */}
     <div
       className="text-gray-800 dark:text-gray-200 flex flex-wrap gap-x-3 gap-y-1
-                 mt-1"
+                 mt-0.5 text-sm" // Reduced top margin, reduced font size
     >
       {liveLink && (
         <Link
@@ -44,9 +44,10 @@ const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
         </Link>
       )}
     </div>
-    <p className="text-gray-700 dark:text-gray-300 mt-3 leading-relaxed text-base">
+    <p className="text-gray-700 dark:text-gray-300 mt-2 leading-relaxed text-sm">
       {description}
-    </p>
+    </p>{" "}
+    {/* Reduced font size, top margin */}
   </li>
 ));
 

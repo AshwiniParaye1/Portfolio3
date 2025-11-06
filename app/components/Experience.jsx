@@ -3,18 +3,20 @@ import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => (
   <li
-    // Added padding and negative margin to make room for the border
-    className="mb-6 py-4 px-4 -mx-4 relative animated-border-hover"
+    className="mb-6 py-2 px-3 -mx-3 relative animated-border-hover" // Reduced padding and negative margin
   >
-    <h3 className="font-semibold text-lg sm:text-xl text-black dark:text-white">
+    <h3 className="font-semibold text-base sm:text-lg text-black dark:text-white">
       {title}
-    </h3>
-    <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-1">
+    </h3>{" "}
+    {/* Reduced font size */}
+    <p className="text-gray-600 dark:text-gray-400 font-light text-xs mt-0.5">
       {period}
-    </p>
-    <p className="text-gray-700 dark:text-gray-300 text-justify mt-3 leading-relaxed text-base">
+    </p>{" "}
+    {/* Reduced font size */}
+    <p className="text-gray-700 dark:text-gray-300 text-justify mt-2 leading-relaxed text-sm">
       {description}
-    </p>
+    </p>{" "}
+    {/* Reduced font size */}
   </li>
 ));
 
@@ -58,10 +60,12 @@ const Experience = () => {
   );
 
   return (
-    <section aria-labelledby="experience-heading" className="mb-8 md:mb-12">
+    <section aria-labelledby="experience-heading" className="mb-6 md:mb-8">
+      {" "}
+      {/* Reduced bottom margin */}
       <h2
         id="experience-heading"
-        className="text-xl sm:text-2xl font-semibold mb-4 text-black dark:text-white"
+        className="text-lg sm:text-xl font-semibold mb-3 text-black dark:text-white" // Reduced font size, margin
       >
         Experience
       </h2>

@@ -68,8 +68,6 @@ li a:not(.no-underline-animation) {
   position: relative;
   overflow: hidden; /* Important to clip the pseudo-element if it overgrows */
   border-radius: 0.25rem; /* Optional: subtle rounding for the border */
-  /* This transition is for the border-color change on hover, if applicable.
-     The animation of the border itself is handled by the pseudo-element. */
   transition: border-color 0.3s ease-out;
 }
 
@@ -85,27 +83,16 @@ li a:not(.no-underline-animation) {
   pointer-events: none; /* Ensure clicks go through to content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 
-  /* The transition properties */
   transition: border-color 0.3s ease-out, transform 0.3s ease-out,
     opacity 0.3s ease-out;
 
-  /* Initially scaled down or hidden */
   transform: scale(0.8);
   opacity: 0;
 }
 
 .animated-border-hover:hover::before {
   border-color: #cbd5e0; /* light gray for light mode */
-  /* Ensure border color for dark mode */
   @apply dark:border-gray-700; /* Tailwind for dark mode border color */
   transform: scale(1); /* Scale up to full size */
   opacity: 1; /* Fade in */
 }
-
-/*
-   A slightly different effect could be achieved by using
-   four individual pseudo-elements or a single pseudo-element
-   with clip-path, but this box-shadow/border technique is
-   often the most performant and straightforward for a
-   "growing" border.
-*/
