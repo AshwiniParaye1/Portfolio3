@@ -19,7 +19,8 @@ const GetInTouch = () => {
           href="https://www.linkedin.com/in/ashwini-paraye/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors
+                     duration-200"
           aria-label="Connect on LinkedIn"
         >
           {" "}
@@ -28,7 +29,8 @@ const GetInTouch = () => {
         or{" "}
         <Link
           href="mailto:ashwiniparaye1@gmail.com"
-          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors
+                     duration-200"
           aria-label="Send an email"
         >
           {" "}

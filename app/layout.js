@@ -73,28 +73,13 @@ export default function RootLayout({ children }) {
   // Determine initial theme for SSR
   let initialIsDark = savedTheme === "dark";
 
-  // Set initial HTML classes
+  // Set initial HTML classes based on the server-determined theme.
+  // This will prevent a flash on initial load if a theme cookie is present.
   const htmlClasses = initialIsDark ? "dark" : "";
 
   return (
     <html lang="en" suppressHydrationWarning className={htmlClasses}>
-      <head>
-        {/* Inline script to handle system dark preference on first visit */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                if (!document.documentElement.classList.contains('dark')) {
-                  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                  if (prefersDark) {
-                    document.documentElement.classList.add('dark');
-                  }
-                }
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head></head>
       <body>
         <ThemeProvider initialIsDark={initialIsDark}>{children}</ThemeProvider>
       </body>

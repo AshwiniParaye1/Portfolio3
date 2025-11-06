@@ -1,4 +1,4 @@
-// app/components/About.jsx
+//app/components/About.jsx
 
 import Link from "next/link";
 import React from "react";
@@ -20,7 +20,8 @@ const SocialLink = ({ href, icon: Icon, label, external = true }) => (
   >
     <Icon
       size={20}
-      className="text-gray-800 dark:text-gray-200 hover:opacity-80 transition-opacity duration-200"
+      className="text-gray-800 dark:text-gray-200 hover:opacity-80
+                 transition-opacity duration-200"
     />
   </Link>
 );
@@ -66,7 +67,10 @@ const About = () => {
         </h1>
         <ThemeToggle />
       </div>
-      <div className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row gap-3">
+      <div
+        className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row
+                   gap-3"
+      >
         {socialLinks.map((link) => (
           <SocialLink
             key={link.href}

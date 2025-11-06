@@ -18,33 +18,33 @@ const Experience = () => {
         title: "Software Engineer | @Freelance",
         period: "Dec 2024 - Present",
         description:
-          "As a freelance developer, I built an AI-powered CSV chatbot using LLMs, RAG, and vector embeddings. " +
-          "Developed full-stack features with Next.js, React, TypeScript, Tailwind & Supabase. " +
-          "Created responsive UIs and dashboards for multiple clients, turning Figma designs into clean, modern interfaces. " +
-          "Handled state management, API integrations, and performance optimization to deliver scalable solutions.",
+          "As a freelance developer, I built an AI-powered CSV chatbot using LLMs, " +
+          "RAG, and vector embeddings. Developed full-stack features with Next.js, " +
+          "React, TypeScript, Tailwind & Supabase. Created responsive UIs and " +
+          "dashboards for multiple clients, turning Figma designs into clean, modern " +
+          "interfaces. Handled state management, API integrations, and performance " +
+          "optimization to deliver scalable solutions.",
       },
       {
         title: "Fullstack Developer | @ProjectBoard",
         period: "June 2023 - May 2024",
         description:
-          "As a fullstack developer in ProjectBoard I developed applications " +
-          "using Vue.js and Golang, created REST APIs, implemented state " +
-          "management with Vuex and worked with the databases. I also " +
-          "collaborated on project management with Monday.com and followed best " +
-          "GitHub practices to ensure high-quality code through testing, " +
-          "debugging and optimization.",
+          "As a fullstack developer in ProjectBoard I developed applications using " +
+          "Vue.js and Golang, created REST APIs, implemented state management with " +
+          "Vuex and worked with the databases. I also collaborated on project " +
+          "management with Monday.com and followed best GitHub practices to ensure " +
+          "high-quality code through testing, debugging and optimization.",
       },
       {
         title: "Software Engineer | @Infosys",
         period: "June 2021 - Nov 2022",
         description:
-          "As a software engineer in Infosys I developed frontend applications " +
-          "using React, focusing on creating responsive and user-friendly " +
-          "interfaces. Contributed to the development of dynamic dashboards, " +
-          "enhancing data visualization and user engagement. Utilized Redux for " +
-          "state management to ensure seamless data flow across the application. " +
-          "Translated Figma designs into fully responsive and interactive user " +
-          "interfaces.",
+          "As a software engineer in Infosys I developed frontend applications using " +
+          "React, focusing on creating responsive and user-friendly interfaces. " +
+          "Contributed to the development of dynamic dashboards, enhancing data " +
+          "visualization and user engagement. Utilized Redux for state management " +
+          "to ensure seamless data flow across the application. Translated Figma " +
+          "designs into fully responsive and interactive user interfaces.",
       },
     ],
     []

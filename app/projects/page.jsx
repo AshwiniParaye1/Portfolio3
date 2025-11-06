@@ -57,9 +57,9 @@ const ProjectsPage = () => {
         liveLink: "https://issue-trackerr1.vercel.app/",
         codeLink: "https://github.com/AshwiniParaye1/Issue-Tracker",
         description:
-          "GitHub Issue Explorer that fetches and analyzes up to 1000 recent " +
-          "issues from any repository, providing detailed insights like status " +
-          "counts, weekly metrics, and closure rates.",
+          "GitHub Issue Explorer that fetches and analyzes up to 1000 recent issues " +
+          "from any repository, providing detailed insights like status counts, " +
+          "weekly metrics, and closure rates.",
       },
       {
         title: "Clip AI",
@@ -101,7 +101,8 @@ const ProjectsPage = () => {
         <div className="flex items-center gap-3">
           <Link
             href="/"
-            className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+            className="text-blue-600 dark:text-blue-400 hover:underline
+                       transition-colors duration-200"
             aria-label="Go back to home page"
           >
             <MdArrowBackIosNew size={20} />
@@ -129,7 +130,8 @@ const ProjectsPage = () => {
             href="https://github.com/AshwiniParaye1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+            className="text-blue-600 dark:text-blue-400 hover:underline
+                       transition-colors duration-200"
             aria-label="Ashwini Paraye's GitHub profile"
           >
             GitHub!

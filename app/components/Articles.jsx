@@ -1,20 +1,7 @@
 // app/components/Articles.jsx
-import Link from "next/link";
 import React from "react";
-
-const ArticleItem = React.memo(({ title, url }) => (
-  <li className="mb-1 text-gray-600 dark:text-gray-300">
-    <Link
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
-      aria-label={`Read article: ${title}`}
-    >
-      {title}
-    </Link>
-  </li>
-));
+import ArticleItem from "./ArticleItem"; // Import the shared component
+import Link from "next/link";
 
 const Articles = () => {
   const articles = React.useMemo(
@@ -58,7 +45,8 @@ const Articles = () => {
           href="https://medium.com/@ashwini-paraye"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+          className="text-blue-600 dark:text-blue-400 hover:underline
+                     transition-colors duration-200"
           aria-label="Ashwini Paraye's Medium profile"
         >
           Medium

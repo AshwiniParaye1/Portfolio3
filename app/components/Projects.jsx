@@ -83,7 +83,8 @@ const Projects = () => {
       <div className="mt-3">
         <Link
           href="/projects"
-          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors duration-200"
+          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors
+                     duration-200"
           aria-label="See all projects"
         >
           See More Projects
