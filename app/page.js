@@ -13,7 +13,8 @@ const Page = () => {
   return (
     <main
       className="bg-white dark:bg-black text-black dark:text-white flex flex-col
-                 xl:px-80 lg:px-60 md:px-48 sm:px-36 p-10 gap-10 min-h-screen"
+                 px-8 md:px-16 lg:px-24 xl:px-48 py-10 sm:py-12 md:py-16 gap-8
+                 min-h-screen max-w-screen-xl mx-auto" // Adjusted padding and max-width
     >
       <About />
       <Experience />

@@ -3,42 +3,7 @@
 
 import Link from "next/link";
 import React from "react";
-
-const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
-  <li className="mb-4 text-black dark:text-white text-justify">
-    <h3 className="font-medium text-lg">{title}</h3>
-    <div className="text-blue-600 dark:text-blue-400 flex flex-wrap gap-x-2">
-      {liveLink && (
-        <Link
-          href={liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline transition-colors duration-200"
-          aria-label={`View live demo of ${title}`}
-        >
-          Live
-        </Link>
-      )}
-      {liveLink && codeLink && (
-        <span className="text-gray-500 dark:text-gray-400">|</span>
-      )}
-      {codeLink && (
-        <Link
-          href={codeLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:underline transition-colors duration-200"
-          aria-label={`View source code for ${title}`}
-        >
-          Source Code
-        </Link>
-      )}
-    </div>
-    <p className="text-gray-600 dark:text-gray-300 mt-1 leading-relaxed">
-      {description}
-    </p>
-  </li>
-));
+import ProjectItem from "./ProjectItem";
 
 const Projects = () => {
   const projects = React.useMemo(
@@ -67,31 +32,34 @@ const Projects = () => {
   );
 
   return (
-    <section aria-labelledby="projects-heading">
-      <h1
+    <section aria-labelledby="projects-heading" className="mb-8 md:mb-12">
+      <h2
         id="projects-heading"
-        className="text-xl mb-2 text-black dark:text-white"
+        className="text-xl sm:text-2xl font-semibold mb-4 text-black dark:text-white"
       >
         Projects
-      </h1>
-      <ul className="list-disc pl-4">
+      </h2>
+      <ul className="list-none pl-0">
+        {" "}
+        {/* Changed from list-disc to list-none */}
         {projects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
       </ul>
 
-      <div className="mt-3">
+      <div className="mt-4">
         <Link
           href="/projects"
-          className="text-blue-600 dark:text-blue-400 hover:underline transition-colors
-                     duration-200"
+          className="text-gray-800 dark:text-gray-200 font-medium
+                     link-underline focus:outline-none focus:ring-2
+                     focus:ring-blue-500 rounded-sm"
           aria-label="See all projects"
         >
           See More Projects
         </Link>
       </div>
 
-      <p className="mt-4 text-gray-600 dark:text-gray-300 text-justify leading-relaxed">
+      <p className="mt-6 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         I actively build products like games and browser extensions, while also
         working on projects such as e-commerce platforms and AI-driven tools.
       </p>

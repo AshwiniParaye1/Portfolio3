@@ -1,5 +1,4 @@
-//app/layout.js
-
+// app/layout.js
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 import { cookies } from "next/headers";
@@ -70,11 +69,7 @@ export default function RootLayout({ children }) {
   const cookieStore = cookies();
   const savedTheme = cookieStore.get(THEME_COOKIE_NAME)?.value;
 
-  // Determine initial theme for SSR
   let initialIsDark = savedTheme === "dark";
-
-  // Set initial HTML classes based on the server-determined theme.
-  // This will prevent a flash on initial load if a theme cookie is present.
   const htmlClasses = initialIsDark ? "dark" : "";
 
   return (

@@ -22,8 +22,61 @@ html {
 
 body {
   @apply bg-white text-black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .dark body {
   @apply bg-black text-white;
 }
+
+/* Custom link underline animation */
+.link-underline {
+  position: relative;
+  text-decoration: none; /* Remove default underline */
+  display: inline-block; /* Essential for pseudo-element positioning */
+  padding-bottom: 2px; /* Space for the underline */
+}
+
+.link-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px; /* Thickness of the underline */
+  background-color: currentColor; /* Matches text color */
+  transition: width 0.3s ease-out; /* Animation */
+}
+
+.link-underline:hover::before {
+  width: 100%;
+}
+
+/* Apply it to links inside <p> or general text in sections */
+p a,
+li a:not(.no-underline-animation) {
+  /* Only target a tags that are direct children of p or li,
+     and don't have the opt-out class */
+  @apply link-underline;
+}
+
+/* Ensure the `text-blue-600` classes don't override the `link-underline`
+   color property directly, as `currentColor` is used.
+   If you want blue on light, and blue on dark for hover, you'd need to
+   adjust link-underline-before or specify here.
+   For now, we're making all active links inherit color for a cleaner look.
+*/
+.link-underline {
+  @apply text-gray-800 dark:text-gray-200; /* Default link color */
+}
+
+/* Specific blue for hover on the kshv.me site is not present.
+   It just uses the current text color.
+   If you want blue, you can add:
+*/
+/*
+.link-underline:hover {
+  @apply text-blue-600 dark:text-blue-400;
+}
+*/

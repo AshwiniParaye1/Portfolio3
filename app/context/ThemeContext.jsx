@@ -15,17 +15,10 @@ const ThemeContext = createContext(undefined);
 const THEME_COOKIE_NAME = "app-theme";
 
 export const ThemeProvider = ({ children, initialIsDark }) => {
-  // Initialize state directly with the prop passed from the server.
-  // This ensures hydration consistency.
   const [isDark, setIsDark] = useState(initialIsDark);
 
-  // This effect synchronizes the `<html>` class and the cookie when `isDark`
-  // state changes. It also handles initial load for clients without a cookie
-  // or when system preference differs from initialIsDark (which might happen
-  // if the server couldn't read system preference).
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Get the current saved theme from cookie or system preference if no cookie
       let currentTheme = Cookies.get(THEME_COOKIE_NAME);
       if (!currentTheme) {
         currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -33,8 +26,6 @@ export const ThemeProvider = ({ children, initialIsDark }) => {
           : "light";
       }
 
-      // Check if the current client-side state is consistent with the `isDark` state
-      // that came from SSR or was set by toggleTheme.
       const shouldBeDark = isDark;
       const htmlElement = document.documentElement;
 
@@ -58,7 +49,7 @@ export const ThemeProvider = ({ children, initialIsDark }) => {
         });
       }
     }
-  }, [isDark]); // Dependency on isDark
+  }, [isDark]);
 
   const toggleTheme = useCallback(() => {
     setIsDark((prevIsDark) => !prevIsDark);

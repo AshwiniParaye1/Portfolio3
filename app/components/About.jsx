@@ -17,11 +17,12 @@ const SocialLink = ({ href, icon: Icon, label, external = true }) => (
     target={external ? "_blank" : undefined}
     rel={external ? "noopener noreferrer" : undefined}
     aria-label={label}
+    className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm" // Added focus styles
   >
     <Icon
       size={20}
-      className="text-gray-800 dark:text-gray-200 hover:opacity-80
-                 transition-opacity duration-200"
+      className="text-gray-800 dark:text-gray-200 hover:opacity-70 transition-opacity
+                 duration-200"
     />
   </Link>
 );
@@ -60,16 +61,19 @@ const About = () => {
   );
 
   return (
-    <section aria-labelledby="about-heading">
-      <div className="flex flex-row justify-between items-center mb-2">
-        <h1 id="about-heading" className="text-xl text-black dark:text-white">
+    <section aria-labelledby="about-heading" className="mb-8 md:mb-12">
+      <div className="flex flex-row justify-between items-center mb-4 sm:mb-6">
+        <h1
+          id="about-heading"
+          className="text-2xl sm:text-3xl font-semibold text-black dark:text-white"
+        >
           Ashwini Paraye
         </h1>
         <ThemeToggle />
       </div>
       <div
-        className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-6 flex flex-row
-                   gap-3"
+        className="text-base text-gray-600 dark:text-gray-300 mt-2 mb-6 flex
+                   flex-row gap-4"
       >
         {socialLinks.map((link) => (
           <SocialLink
@@ -81,7 +85,7 @@ const About = () => {
           />
         ))}
       </div>
-      <p className="text-gray-600 dark:text-gray-300 text-justify leading-relaxed">
+      <p className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         I am Ashwini Paraye, a passionate Full Stack Developer with a love for
         writing, based in the vibrant world of technology. With expertise in
         both front-end and back-end development, I craft seamless, user-focused

@@ -2,10 +2,17 @@
 import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => (
-  <li className="mb-4 text-black dark:text-white">
-    <h3 className="font-medium text-lg">{title}</h3>
-    <p className="text-black dark:text-white font-light text-sm">{period}</p>
-    <p className="text-gray-600 dark:text-gray-300 text-justify mt-1 leading-relaxed">
+  <li
+    className="mb-6 p-4 -mx-4 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800
+               transition-colors duration-200"
+  >
+    <h3 className="font-semibold text-lg sm:text-xl text-black dark:text-white">
+      {title}
+    </h3>
+    <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-1">
+      {period}
+    </p>
+    <p className="text-gray-700 dark:text-gray-300 text-justify mt-3 leading-relaxed text-base">
       {description}
     </p>
   </li>
@@ -51,14 +58,16 @@ const Experience = () => {
   );
 
   return (
-    <section aria-labelledby="experience-heading">
-      <h1
+    <section aria-labelledby="experience-heading" className="mb-8 md:mb-12">
+      <h2
         id="experience-heading"
-        className="text-xl mb-2 text-black dark:text-white"
+        className="text-xl sm:text-2xl font-semibold mb-4 text-black dark:text-white"
       >
         Experience
-      </h1>
-      <ul className="list-disc pl-4">
+      </h2>
+      <ul className="list-none pl-0">
+        {" "}
+        {/* Changed from list-disc to list-none */}
         {experiences.map((job) => (
           <ExperienceItem key={job.title} {...job} />
         ))}

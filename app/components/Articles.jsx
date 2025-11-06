@@ -1,7 +1,8 @@
 // app/components/Articles.jsx
+// app/components/Articles.jsx
+import Link from "next/link";
 import React from "react";
 import ArticleItem from "./ArticleItem"; // Import the shared component
-import Link from "next/link";
 
 const Articles = () => {
   const articles = React.useMemo(
@@ -27,26 +28,29 @@ const Articles = () => {
   );
 
   return (
-    <section aria-labelledby="articles-heading">
-      <h1
+    <section aria-labelledby="articles-heading" className="mb-8 md:mb-12">
+      <h2
         id="articles-heading"
-        className="text-xl mb-2 text-black dark:text-white"
+        className="text-xl sm:text-2xl font-semibold mb-4 text-black dark:text-white"
       >
         Articles
-      </h1>
-      <ul className="list-disc pl-4">
+      </h2>
+      <ul className="list-none pl-0">
+        {" "}
+        {/* Changed from list-disc to list-none */}
         {articles.map((article) => (
           <ArticleItem key={article.url} {...article} />
         ))}
       </ul>
-      <p className="mt-2 text-gray-600 dark:text-gray-300 text-justify leading-relaxed">
+      <p className="mt-4 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         Check out more of my articles on{" "}
         <Link
           href="https://medium.com/@ashwini-paraye"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-600 dark:text-blue-400 hover:underline
-                     transition-colors duration-200"
+          className="text-gray-800 dark:text-gray-200 font-medium
+                     link-underline focus:outline-none focus:ring-2
+                     focus:ring-blue-500 rounded-sm"
           aria-label="Ashwini Paraye's Medium profile"
         >
           Medium

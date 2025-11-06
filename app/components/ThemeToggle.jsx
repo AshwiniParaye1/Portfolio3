@@ -11,16 +11,16 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700
+      className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800
                  transition-colors duration-200 focus:outline-none focus:ring-2
                  focus:ring-blue-500"
       aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
       type="button"
     >
       {isDark ? (
-        <FiSun className="text-white" size={20} />
+        <FiSun className="text-gray-200 hover:text-white" size={20} />
       ) : (
-        <FiMoon className="text-black" size={20} />
+        <FiMoon className="text-gray-800 hover:text-black" size={20} />
       )}
     </button>
   );

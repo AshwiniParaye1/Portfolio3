@@ -1,17 +1,19 @@
 // app/components/ArticleItem.jsx
-"use client"; // If it uses any client-side hooks or features
+// app/components/ArticleItem.jsx
+"use client";
 
 import Link from "next/link";
 import React from "react";
 
 const ArticleItem = React.memo(({ title, url }) => (
-  <li className="mb-1 text-gray-600 dark:text-gray-300">
+  <li className="mb-2 text-gray-700 dark:text-gray-300 transition-colors duration-200">
     <Link
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-blue-600 dark:text-blue-400 hover:underline
-                 transition-colors duration-200"
+      className="text-gray-800 dark:text-gray-200 font-medium
+                 link-underline focus:outline-none focus:ring-2
+                 focus:ring-blue-500 rounded-sm"
       aria-label={`Read article: ${title}`}
     >
       {title}
