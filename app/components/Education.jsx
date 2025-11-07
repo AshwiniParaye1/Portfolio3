@@ -18,7 +18,7 @@ const Education = () => {
           {" "}
           {/* List item margin */}
           <h3 className="text-base sm:text-base text-black dark:text-white font-medium">
-            Master of Science - 2022
+            Masters in Information Technology - 2022
           </h3>{" "}
           {/* Heading size */}
           <p className="mt-0.5 text-base">
