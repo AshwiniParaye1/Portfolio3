@@ -32,38 +32,38 @@ const Projects = () => {
   );
 
   return (
-    <section aria-labelledby="projects-heading" className="mb-6 md:mb-8">
+    <section aria-labelledby="projects-heading" className="mb-4">
       {" "}
-      {/* Reduced bottom margin */}
+      {/* Smallest margin */}
       <h2
         id="projects-heading"
-        className="text-lg sm:text-xl font-semibold mb-3 text-black dark:text-white" // Reduced font size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
       >
         Projects
       </h2>
-      <ul className="list-none pl-0">
+      <ul className="list-disc pl-4">
         {projects.map((project) => (
           <ProjectItem key={project.title} {...project} />
         ))}
       </ul>
-      <div className="mt-3">
+      <div className="mt-2">
         {" "}
-        {/* Reduced top margin */}
+        {/* Minimized top margin */}
         <Link
           href="/projects"
-          className="text-gray-800 dark:text-gray-200 font-medium text-sm
+          className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Reduced font size
+                     focus:ring-blue-500 rounded-sm" // Link text size
           aria-label="See all projects"
         >
           See More Projects
         </Link>
       </div>
-      <p className="mt-4 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-sm">
+      <p className="mt-3 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         {" "}
-        {/* Reduced font size, top margin */}I actively build products like
-        games and browser extensions, while also working on projects such as
-        e-commerce platforms and AI-driven tools.
+        {/* Paragraph size, margin */}I actively build products like games and
+        browser extensions, while also working on projects such as e-commerce
+        platforms and AI-driven tools.
       </p>
     </section>
   );

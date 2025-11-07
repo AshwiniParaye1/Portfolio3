@@ -2,21 +2,23 @@
 import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => (
-  <li
-    className="mb-6 py-2 px-3 -mx-3 relative animated-border-hover" // Reduced padding and negative margin
-  >
-    <h3 className="font-semibold text-base sm:text-lg text-black dark:text-white">
-      {title}
-    </h3>{" "}
-    {/* Reduced font size */}
-    <p className="text-gray-600 dark:text-gray-400 font-light text-xs mt-0.5">
-      {period}
-    </p>{" "}
-    {/* Reduced font size */}
-    <p className="text-gray-700 dark:text-gray-300 text-justify mt-2 leading-relaxed text-sm">
-      {description}
-    </p>{" "}
-    {/* Reduced font size */}
+  <li className="mb-4 ">
+    <div
+      className="py-1.5 px-2 -mx-2 relative animated-border-hover" // Inner div for animated border
+    >
+      <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
+        {title}
+      </h3>{" "}
+      {/* Heading size */}
+      <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-0.5">
+        {period}
+      </p>{" "}
+      {/* Smaller text for period */}
+      <p className="text-gray-700 dark:text-gray-300 text-justify mt-1.5 leading-relaxed text-base">
+        {description}
+      </p>{" "}
+      {/* Paragraph size */}
+    </div>
   </li>
 ));
 
@@ -60,16 +62,18 @@ const Experience = () => {
   );
 
   return (
-    <section aria-labelledby="experience-heading" className="mb-6 md:mb-8">
+    <section aria-labelledby="experience-heading" className="mb-4">
       {" "}
-      {/* Reduced bottom margin */}
+      {/* Smallest margin */}
       <h2
         id="experience-heading"
-        className="text-lg sm:text-xl font-semibold mb-3 text-black dark:text-white" // Reduced font size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
       >
         Experience
       </h2>
-      <ul className="list-none pl-0">
+      <ul className="list-disc pl-4">
+        {" "}
+        {/* list-disc and pl-4 */}
         {experiences.map((job) => (
           <ExperienceItem key={job.title} {...job} />
         ))}

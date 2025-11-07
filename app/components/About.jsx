@@ -19,7 +19,7 @@ const SocialLink = ({ href, icon: Icon, label, external = true }) => (
     className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm"
   >
     <Icon
-      size={18} // Smaller icon size
+      size={18} // Adjusted icon size
       className="text-gray-800 dark:text-gray-200 hover:opacity-70 transition-opacity
                  duration-200"
     />
@@ -60,23 +60,23 @@ const About = () => {
   );
 
   return (
-    <section aria-labelledby="about-heading" className="mb-6 md:mb-8">
+    <section aria-labelledby="about-heading" className="mb-4">
       {" "}
-      {/* Reduced bottom margin */}
-      <div className="flex flex-row justify-between items-center mb-3 sm:mb-4">
+      {/* Smallest margin */}
+      <div className="flex flex-row justify-between items-center mb-2">
         {" "}
-        {/* Reduced bottom margin */}
+        {/* Minimized bottom margin */}
         <h1
           id="about-heading"
-          className="text-xl sm:text-2xl font-semibold text-black dark:text-white" // Reduced font size
+          className="text-xl sm:text-2xl font-semibold text-black dark:text-white" // Heading size
         >
           Ashwini Paraye
         </h1>
         <ThemeToggle />
       </div>
       <div
-        className="text-sm text-gray-600 dark:text-gray-300 mt-1 mb-4 flex
-                   flex-row gap-3" // Reduced bottom margin, slightly smaller gap
+        className="text-base text-gray-600 dark:text-gray-300 mt-1 mb-3 flex
+                   flex-row gap-3" // Text size, gap
       >
         {socialLinks.map((link) => (
           <SocialLink
@@ -88,9 +88,9 @@ const About = () => {
           />
         ))}
       </div>
-      <p className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-sm">
+      <p className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         {" "}
-        {/* Reduced font size */}I am Ashwini Paraye, a passionate Full Stack
+        {/* Paragraph size */}I am Ashwini Paraye, a passionate Full Stack
         Developer with a love for writing, based in the vibrant world of
         technology. With expertise in both front-end and back-end development, I
         craft seamless, user-focused web applications. When I'm not coding, I

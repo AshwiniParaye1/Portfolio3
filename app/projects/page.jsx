@@ -60,15 +60,15 @@ const ProjectsPage = () => {
   return (
     <div
       className="bg-white dark:bg-black text-black dark:text-white flex flex-col
-                 px-6 md:px-12 lg:px-20 xl:px-36 py-8 sm:py-10 md:py-12 gap-6
-                 min-h-screen max-w-screen-xl mx-auto" // Reduced padding and gap
+                 px-16 md:px-16 lg:px-24 xl:px-52 py-16 sm:py-12 md:py-20 gap-4
+                 min-h-screen max-w-screen-xl mx-auto" // Main padding and gap
     >
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex justify-between items-center mb-2">
         {" "}
-        {/* Reduced bottom margin */}
+        {/* Minimized bottom margin */}
         <div className="flex items-center gap-2">
           {" "}
-          {/* Reduced gap */}
+          {/* Minimized gap */}
           <Link
             href="/"
             className="text-gray-800 dark:text-gray-200 hover:opacity-70
@@ -76,12 +76,12 @@ const ProjectsPage = () => {
                        focus:ring-2 focus:ring-blue-500 rounded-sm"
             aria-label="Go back to home page"
           >
-            <MdArrowBackIosNew size={18} /> {/* Reduced icon size */}
+            <MdArrowBackIosNew size={18} /> {/* Icon size */}
           </Link>
           <h1 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
             Projects
           </h1>{" "}
-          {/* Reduced font size */}
+          {/* Heading size */}
         </div>
         <ThemeToggle />
       </div>
@@ -90,7 +90,9 @@ const ProjectsPage = () => {
         <h2 id="more-projects-heading" className="sr-only">
           More Projects
         </h2>
-        <ul className="list-none pl-0">
+        <ul className="list-disc pl-4">
+          {" "}
+          {/* list-disc and pl-4 */}
           {moreProjects.map((project) => (
             <ProjectItem key={project.title} {...project} />
           ))}
@@ -98,7 +100,7 @@ const ProjectsPage = () => {
       </section>
 
       <div
-        className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-sm" // Reduced font size
+        className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-base" // Paragraph size
       >
         <p>
           Want to see more projects? Check out{" "}
@@ -106,9 +108,9 @@ const ProjectsPage = () => {
             href="https://github.com/AshwiniParaye1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 dark:text-gray-200 font-medium text-sm
+            className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Reduced font size
+                     focus:ring-blue-500 rounded-sm" // Link text size
             aria-label="Ashwini Paraye's GitHub profile"
           >
             GitHub!

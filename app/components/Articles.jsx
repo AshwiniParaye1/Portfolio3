@@ -27,31 +27,33 @@ const Articles = () => {
   );
 
   return (
-    <section aria-labelledby="articles-heading" className="mb-6 md:mb-8">
+    <section aria-labelledby="articles-heading" className="mb-4">
       {" "}
-      {/* Reduced bottom margin */}
+      {/* Smallest margin */}
       <h2
         id="articles-heading"
-        className="text-lg sm:text-xl font-semibold mb-3 text-black dark:text-white" // Reduced font size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
       >
         Articles
       </h2>
-      <ul className="list-none pl-0">
+      <ul className="list-disc pl-4">
+        {" "}
+        {/* list-disc and pl-4 */}
         {articles.map((article) => (
           <ArticleItem key={article.url} {...article} />
         ))}
       </ul>
-      <p className="mt-3 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-sm">
+      <p className="mt-2 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         {" "}
-        {/* Reduced font size, margin */}
+        {/* Paragraph size, margin */}
         Check out more of my articles on{" "}
         <Link
           href="https://medium.com/@ashwini-paraye"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-800 dark:text-gray-200 font-medium text-sm
+          className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Reduced font size
+                     focus:ring-blue-500 rounded-sm" // Link text size
           aria-label="Ashwini Paraye's Medium profile"
         >
           Medium

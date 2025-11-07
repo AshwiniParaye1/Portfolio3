@@ -12,9 +12,9 @@ import Education from "./components/Education";
 const Page = () => {
   return (
     <main
-      className="bg-white dark:bg-black text-black dark:text-white flex flex-col
-                 px-6 md:px-12 lg:px-20 xl:px-36 py-8 sm:py-10 md:py-12 gap-6
-                 min-h-screen max-w-screen-xl mx-auto" // Reduced padding and gap
+      className="bg-neutral-100 dark:bg-neutral-950 text-black dark:text-white flex flex-col
+                 px-16 md:px-16 lg:px-24 xl:px-52 py-16 sm:py-12 md:py-20 gap-4
+                 min-h-screen max-w-screen-xl mx-auto" // Main padding and gap
     >
       <About />
       <Experience />
