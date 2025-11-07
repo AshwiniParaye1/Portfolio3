@@ -31,12 +31,12 @@ body {
   @apply bg-neutral-950 text-white;
 }
 
-/* Custom link underline animation */
+/* ---------- Link underline animation ---------- */
 .link-underline {
   position: relative;
-  text-decoration: none; /* Remove default underline */
-  display: inline-block; /* Essential for pseudo-element positioning */
-  padding-bottom: 2px; /* Space for the underline */
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 2px;
 }
 
 .link-underline::before {
@@ -45,53 +45,157 @@ body {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 1px; /* Thickness of the underline */
-  background-color: currentColor; /* Matches text color */
-  transition: width 0.3s ease-out; /* Animation */
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease-out;
 }
 
 .link-underline:hover::before {
   width: 100%;
 }
 
-/* Apply it to links inside <p> or general text in sections */
 p a,
 li a:not(.no-underline-animation) {
   @apply link-underline;
 }
 
 .link-underline {
-  @apply text-gray-800 dark:text-gray-200; /* Default link color */
+  @apply text-gray-800 dark:text-gray-200;
 }
 
-/* Animated 4-Sided Border Hover for List Items */
+/* ---------- Animated border hover (multi-color) ---------- */
 .animated-border-hover {
   position: relative;
-  overflow: hidden; /* Important to clip the pseudo-element if it overgrows */
+  overflow: hidden;
   transition: border-color 0.3s ease-out;
+
+  /* Default hover colors (light/dark) */
+  --hover-border-color-light: #cbd5e0; /* gray-300 */
+  --hover-border-color-dark: #374151; /* gray-700 */
 }
 
 .animated-border-hover::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-bottom: 1.5px solid transparent; /* Start with transparent border */
-  pointer-events: none; /* Ensure clicks go through to content */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-
+  inset: 0;
+  border-bottom: 1.5px solid transparent;
+  pointer-events: none;
+  box-sizing: border-box;
   transition: border-color 0.3s ease-out, transform 0.3s ease-out,
     opacity 0.3s ease-out;
-
   transform: scale(0.8);
   opacity: 0;
 }
 
 .animated-border-hover:hover::before {
-  border-color: #cbd5e0; /* light gray for light mode */
-  @apply dark:border-gray-700; /* Tailwind for dark mode border color */
-  transform: scale(1); /* Scale up to full size */
-  opacity: 1; /* Fade in */
+  border-color: var(--hover-border-color-light);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.dark .animated-border-hover:hover::before {
+  border-color: var(--hover-border-color-dark);
+}
+
+/* ---------- Optional preset color classes ---------- */
+.hover-red {
+  --hover-border-color-light: #f40e0e; /* red-500 */
+  --hover-border-color-dark: #e34545; /* red-400 */
+}
+
+.hover-blue {
+  --hover-border-color-light: #3b82f6; /* blue-500 */
+  --hover-border-color-dark: #60a5fa; /* blue-400 */
+}
+
+.hover-green {
+  --hover-border-color-light: #10b981; /* green-500 */
+  --hover-border-color-dark: #34d399; /* green-400 */
+}
+
+.hover-purple {
+  --hover-border-color-light: #8b5cf6; /* purple-500 */
+  --hover-border-color-dark: #a78bfa; /* purple-400 */
+}
+
+.hover-orange {
+  --hover-border-color-light: #f97316; /* orange-500 */
+  --hover-border-color-dark: #fb923c; /* orange-400 */
+}
+.hover-pink {
+  --hover-border-color-light: #f9a8d4; /* pink-500 */
+  --hover-border-color-dark: #f472b6; /* pink-400 */
+}
+.hover-yellow {
+  --hover-border-color-light: #fde68a; /* yellow-300 */
+  --hover-border-color-dark: #facc15; /* yellow-400 */
+}
+
+/* ---------- Hover Underline Animation for Text Elements ---------- */
+.hover-underline-animation {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  padding-bottom: 2px;
+  transition: color 0.3s ease;
+  --underline-color-light: #f9a8d4; /* default pastel pink */
+  --underline-color-dark: #f472b6;
+}
+
+/* Base underline animation */
+.hover-underline-animation::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--underline-color-light);
+  transition: width 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+/* Animate underline on hover */
+.hover-underline-animation:hover::before {
+  width: 100%;
+}
+
+.dark .hover-underline-animation::before {
+  background-color: var(--underline-color-dark);
+}
+
+/* ---------- Reuse same hover color classes for underline ---------- */
+.hover-underline-animation.hover-pink {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-orange {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-red {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-green {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-blue {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-purple {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
+}
+
+.hover-underline-animation.hover-yellow {
+  --underline-color-light: var(--hover-border-color-light);
+  --underline-color-dark: var(--hover-border-color-dark);
 }

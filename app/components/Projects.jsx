@@ -37,7 +37,7 @@ const Projects = () => {
       {/* Smallest margin */}
       <h2
         id="projects-heading"
-        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-green" // Heading size, margin
       >
         Projects
       </h2>

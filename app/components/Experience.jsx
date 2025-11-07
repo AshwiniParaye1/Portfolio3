@@ -3,9 +3,7 @@ import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => (
   <li className="mb-4 ">
-    <div
-      className="py-1.5 px-2 -mx-2 relative animated-border-hover" // Inner div for animated border
-    >
+    <div className="py-1.5 px-2 -mx-2 relative animated-border-hover hover-pink">
       <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
         {title}
       </h3>{" "}
@@ -62,12 +60,12 @@ const Experience = () => {
   );
 
   return (
-    <section aria-labelledby="experience-heading" className="mb-4">
+    <section aria-labelledby="experience-heading" className="mb-4 ">
       {" "}
       {/* Smallest margin */}
       <h2
         id="experience-heading"
-        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-pink" // Heading size, margin
       >
         Experience
       </h2>

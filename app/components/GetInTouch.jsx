@@ -9,7 +9,7 @@ const GetInTouch = () => {
       {/* Smallest margin */}
       <h2
         id="get-in-touch-heading"
-        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white" // Heading size, margin
+        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-yellow" // Heading size, margin
       >
         Get In Touch
       </h2>

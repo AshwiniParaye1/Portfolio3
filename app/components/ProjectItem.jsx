@@ -8,9 +8,7 @@ const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
   <li className="mb-4">
     {" "}
     {/* mb for spacing between list items, bullet point is native to li */}
-    <div
-      className="py-1.5 px-2 -mx-2 relative animated-border-hover" // Inner div for animated border
-    >
+    <div className="py-1.5 px-2 -mx-2 relative animated-border-hover hover-green">
       <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
         {title}
       </h3>{" "}

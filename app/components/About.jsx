@@ -60,7 +60,7 @@ const About = () => {
   );
 
   return (
-    <section aria-labelledby="about-heading" className="mb-4">
+    <section aria-labelledby="about-heading" className="mb-4 ">
       {" "}
       {/* Smallest margin */}
       <div className="flex flex-row justify-between items-center mb-2">
