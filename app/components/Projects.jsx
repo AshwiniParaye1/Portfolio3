@@ -49,7 +49,7 @@ const Projects = () => {
       <div className="mt-2">
         {" "}
         {/* Minimized top margin */}
-        <Link
+        {/* <Link
           href="/projects"
           className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
@@ -57,13 +57,24 @@ const Projects = () => {
           aria-label="See all projects"
         >
           See More Projects
-        </Link>
+        </Link> */}
       </div>
       <p className="mt-3 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
-        {" "}
-        {/* Paragraph size, margin */}I actively build products like games and
-        browser extensions, while also working on projects such as e-commerce
-        platforms and AI-driven tools.
+        I actively build products including <b>Web Apps, </b> <b>Games</b> and{" "}
+        <b>Browser Extensions</b>, while also working on projects such as{" "}
+        <b>E-Commerce Platforms</b> and <b>AI-Driven Tools</b>. Feel free to
+        explore more on my{" "}
+        <Link
+          href="https://github.com/AshwiniParaye1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-800 dark:text-gray-200 font-medium text-base
+                     link-underline focus:outline-none focus:ring-2
+                     focus:ring-blue-500 rounded-sm" // Link text size
+          aria-label="Ashwini Paraye's GitHub profile"
+        >
+          GitHub!
+        </Link>
       </p>
     </section>
   );
