@@ -27,7 +27,7 @@ export const metadata = {
     siteName: "Ashwini Paraye Portfolio",
     images: [
       {
-        url: "https://ashwiniparaye.in/profile-banner1.png",
+        url: "https://ashwiniparaye.in/banner1.png",
         width: 1200,
         height: 630,
         alt: "Ashwini Paraye Portfolio",
@@ -41,7 +41,7 @@ export const metadata = {
     title: "Ashwini Paraye - Fullstack Developer",
     description: "Ashwini Paraye's - Fullstack Developer.",
     creator: "@AshwiniParaye",
-    images: ["https://ashwiniparaye.in/profile-banner1.png"],
+    images: ["https://ashwiniparaye.in/banner1.png"],
   },
   robots: {
     index: true,
