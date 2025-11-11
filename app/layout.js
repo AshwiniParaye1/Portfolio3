@@ -37,7 +37,7 @@ export const metadata = {
     type: "website",
   },
   twitter: {
-    card: "ashwini-profile",
+    card: "summary_large_image",
     title: "Ashwini Paraye - Fullstack Developer",
     description: "Ashwini Paraye's - Fullstack Developer.",
     creator: "@AshwiniParaye",
