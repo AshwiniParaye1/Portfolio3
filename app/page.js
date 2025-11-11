@@ -32,12 +32,13 @@ const Page = () => {
                  px-16 md:px-16 lg:px-24 xl:px-52 py-16 sm:py-12 md:py-20 gap-4
                  min-h-screen max-w-screen-xl mx-auto" // Main padding and gap
     >
-      {/* About Section */}
+      {/* About Section - it has internal animations, but wrapping it
+          ensures its parent section also triggers on scroll if it's below the fold */}
       <motion.section
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }} // Animate once when 30% of section is in view
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <About />
       </motion.section>
@@ -47,7 +48,7 @@ const Page = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <Experience />
       </motion.section>
@@ -57,7 +58,7 @@ const Page = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <Projects />
       </motion.section>
@@ -67,7 +68,7 @@ const Page = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <Articles />
       </motion.section>
@@ -77,7 +78,7 @@ const Page = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <Education />
       </motion.section>
@@ -87,7 +88,7 @@ const Page = () => {
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <GetInTouch />
       </motion.section>

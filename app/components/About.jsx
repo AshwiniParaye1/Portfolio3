@@ -1,4 +1,6 @@
 // app/components/About.jsx
+"use client"; // This component might already be a client component, but good to ensure if it uses Framer Motion
+
 import Link from "next/link";
 import React from "react";
 import {
@@ -10,19 +12,16 @@ import { RiLinkedinBoxLine } from "react-icons/ri";
 import { CgNotes } from "react-icons/cg";
 import ThemeToggle from "./ThemeToggle";
 
-// Import motion from framer-motion
 import { motion } from "framer-motion";
 
 const SocialLink = ({ href, icon: Icon, label, external = true }) => (
-  // motion.a is used here because Link renders an <a> tag
-  // We can also wrap Link in motion.div if we prefer
   <motion.a
     href={href}
     target={external ? "_blank" : undefined}
     rel={external ? "noopener noreferrer" : undefined}
     aria-label={label}
-    className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm block" // Added 'block' for better hover area
-    whileHover={{ scale: 1.2, rotate: 5 }} // Simple scale and rotate on hover
+    className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm block"
+    whileHover={{ scale: 1.2, rotate: 5 }} // Subtle bounce/pulse on hover
     whileTap={{ scale: 0.9 }} // Visual feedback on tap/click
   >
     <Icon
@@ -103,7 +102,7 @@ const About = () => {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible" // Animate when the container enters view
-        viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of container is visible
+        viewport={{ amount: 0.5 }} // Trigger every time 50% of container is visible
       >
         {socialLinks.map((link) => (
           <motion.div key={link.href} variants={itemVariants}>
@@ -121,7 +120,7 @@ const About = () => {
         className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ amount: 0.5 }} // Trigger every time 50% of paragraph is visible
         transition={{ duration: 0.6, delay: 0.4 }} // Delay to animate after icons
       >
         I am Ashwini Paraye, a passionate Full Stack Developer with a love for
