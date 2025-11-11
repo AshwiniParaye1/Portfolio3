@@ -36,13 +36,13 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ashwini Paraye - Fullstack Developer",
-    description: "Ashwini Paraye's - Fullstack Developer.",
-    creator: "@AshwiniParaye",
-    images: ["https://ashwiniparaye.in/profile-banner1.png"],
-  },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   title: "Ashwini Paraye - Fullstack Developer",
+  //   description: "Ashwini Paraye's - Fullstack Developer.",
+  //   creator: "@AshwiniParaye",
+  //   images: ["https://ashwiniparaye.in/profile-banner1.png"],
+  // },
   robots: {
     index: true,
     follow: true,
