@@ -7,6 +7,9 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import ThemeToggle from "../components/ThemeToggle";
 import ProjectItem from "../components/ProjectItem";
 
+// Import motion from framer-motion
+import { motion } from "framer-motion";
+
 const ProjectsPage = () => {
   const moreProjects = React.useMemo(
     () => [
@@ -57,6 +60,27 @@ const ProjectsPage = () => {
     []
   );
 
+  // Animation variants for the individual project items
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
+  // Animation variants for the container (to orchestrate stagger children)
+  const containerVariants = {
+    hidden: { opacity: 1 }, // Container starts visible
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1, // Each child animates with a 0.1s delay after the previous
+      },
+    },
+  };
+
   return (
     <div
       className="bg-white dark:bg-black text-black dark:text-white flex flex-col
@@ -64,11 +88,7 @@ const ProjectsPage = () => {
                  min-h-screen max-w-screen-xl mx-auto" // Main padding and gap
     >
       <div className="flex justify-between items-center mb-2">
-        {" "}
-        {/* Minimized bottom margin */}
         <div className="flex items-center gap-2">
-          {" "}
-          {/* Minimized gap */}
           <Link
             href="/"
             className="text-gray-800 dark:text-gray-200 hover:opacity-70
@@ -76,12 +96,11 @@ const ProjectsPage = () => {
                        focus:ring-2 focus:ring-blue-500 rounded-sm"
             aria-label="Go back to home page"
           >
-            <MdArrowBackIosNew size={18} /> {/* Icon size */}
+            <MdArrowBackIosNew size={18} />
           </Link>
           <h1 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
             Projects
-          </h1>{" "}
-          {/* Heading size */}
+          </h1>
         </div>
         <ThemeToggle />
       </div>
@@ -90,19 +109,30 @@ const ProjectsPage = () => {
         <h2 id="more-projects-heading" className="sr-only">
           More Projects
         </h2>
-        <ul className="list-disc pl-4">
-          {" "}
-          {/* list-disc and pl-4 */}
+        {/* Use motion.ul to wrap the project items and apply container variants */}
+        <motion.ul
+          className="list-disc pl-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }} // Trigger when 10% of list is in view
+        >
           {moreProjects.map((project) => (
-            <ProjectItem key={project.title} {...project} />
+            // Each ProjectItem will be a motion.li or wrapped in motion.div
+            <motion.li key={project.title} variants={itemVariants}>
+              <ProjectItem {...project} />
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </section>
 
-      <div
-        className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-base" // Paragraph size
-      >
-        <p>
+      <div className="text-gray-700 dark:text-gray-300 text-justify mt-auto text-base">
+        <motion.p
+          variants={itemVariants} // Reusing itemVariants for this paragraph
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           Want to see more projects? Check out{" "}
           <Link
             href="https://github.com/AshwiniParaye1"
@@ -110,12 +140,12 @@ const ProjectsPage = () => {
             rel="noopener noreferrer"
             className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
+                     focus:ring-blue-500 rounded-sm"
             aria-label="Ashwini Paraye's GitHub profile"
           >
             GitHub!
           </Link>
-        </p>
+        </motion.p>
       </div>
     </div>
   );
