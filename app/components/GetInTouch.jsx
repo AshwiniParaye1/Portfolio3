@@ -30,7 +30,7 @@ const GetInTouch = () => {
         >
           {" "}
           Linkedin{" "}
-        </Link>
+        </Link>{" "}
         or{" "}
         <Link
           href="mailto:ashwiniparaye1@gmail.com"
