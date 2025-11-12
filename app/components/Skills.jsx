@@ -15,7 +15,6 @@ const skills = [
   "Express.js",
   "MongoDB",
   "MySQL",
-  "Git/GitHub",
 ];
 
 const Skills = () => {
