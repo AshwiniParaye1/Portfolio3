@@ -122,12 +122,11 @@ const About = () => {
         viewport={{ amount: 0.5 }} // Trigger every time 50% of paragraph is visible
         transition={{ duration: 0.6, delay: 0.4 }} // Delay to animate after icons
       >
-        I am Ashwini Paraye, a passionate Full Stack Developer with a love for
-        writing, based in the vibrant world of technology. With expertise in
-        both front-end and back-end development, I craft seamless, user-focused
-        web applications. When I'm not coding, I share my knowledge and insights
-        through writing. Let's collaborate to bring your ideas to life with
-        innovative solutions and engaging content.
+        Hey, I'm Ashwini, a Full Stack Developer with a passion for building
+        seamless, human-centered web experiences and sharing what I learn along
+        the way. I blend design, development, and storytelling to turn ideas
+        into intuitive digital products and thoughtful writing. I believe great
+        products start with great conversations, so hey, let’s talk!
       </motion.p>
     </section>
   );
