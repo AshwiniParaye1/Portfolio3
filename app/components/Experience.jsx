@@ -1,4 +1,3 @@
-// app/components/Experience.jsx
 import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => (
@@ -60,7 +59,11 @@ const Experience = () => {
   );
 
   return (
-    <section aria-labelledby="experience-heading" className="mb-4 ">
+    <section
+      id="experience"
+      aria-labelledby="experience-heading"
+      className="mb-4 "
+    >
       {" "}
       {/* Smallest margin */}
       <h2

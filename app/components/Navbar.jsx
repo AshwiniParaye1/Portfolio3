@@ -1,4 +1,3 @@
-// app/components/Navbar.jsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -40,7 +39,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed w-full z-50 transition-all duration-300
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300
                   ${
                     scrolled
                       ? "bg-white/90 shadow-lg dark:bg-neutral-900/90 backdrop-blur-sm"
@@ -51,8 +50,9 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div
-        className="max-w-screen-xl mx-auto flex items-center justify-center h-20
-                   px-16 md:px-16 lg:px-24 xl:px-52"
+        className="max-w-screen-xl mx-auto flex items-center
+                   justify-end md:justify-center h-20 px-4 sm:px-6
+                   lg:px-8 xl:px-12"
       >
         {/* <a
           href="#about" // Link to the about section on click
@@ -60,17 +60,29 @@ const Navbar = () => {
         >
           Your Name
         </a> */}
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-neutral-700 dark:text-neutral-300 hover:text-indigo-600
-                         dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium relative
-                         after:absolute after:left-0 after:bottom-[-4px] after:w-0 after:h-[2px] after:bg-indigo-600
-                         dark:after:bg-indigo-400 after:transition-all after:duration-300 hover:after:w-full" // Added underline effect
+              className={`text-neutral-700 dark:text-neutral-300 transition-colors
+                         duration-200 text-lg font-medium relative
+                         hover-underline-animation
+                         ${
+                           // Dynamically apply hover color class
+                           link.name === "Articles"
+                             ? "hover-orange"
+                             : link.name === "Experience"
+                             ? "hover-pink"
+                             : link.name === "Projects"
+                             ? "hover-green"
+                             : link.name === "Skills"
+                             ? "hover-purple"
+                             : link.name === "Education"
+                             ? "hover-blue"
+                             : "hover-blue" // Default hover for others (About & Contact)
+                         }`}
             >
               {link.name}
             </a>
@@ -81,7 +93,8 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-neutral-700 dark:text-neutral-300 focus:outline-none"
+            className="text-neutral-700 dark:text-neutral-300 focus:outline-none
+                       ml-auto" // Push to right on mobile
             aria-label="Toggle navigation menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -105,8 +118,24 @@ const Navbar = () => {
                   key={link.name}
                   href={link.href}
                   onClick={toggleMenu} // Close menu on link click
-                  className="text-neutral-700 dark:text-neutral-300 hover:text-indigo-600
-                             dark:hover:text-indigo-400 transition-colors duration-200 text-lg font-medium py-2 w-full text-center"
+                  className={`text-neutral-700 dark:text-neutral-300 transition-colors
+                             duration-200 text-2xl  py-2 w-full text-center
+                             hover-underline-animation
+                             ${
+                               link.name === "Articles"
+                                 ? "hover-orange"
+                                 : link.name === "Experience"
+                                 ? "hover-pink"
+                                 : link.name === "Projects"
+                                 ? "hover-green"
+                                 : link.name === "Skills"
+                                 ? "hover-purple"
+                                 : link.name === "Education"
+                                 ? "hover-blue"
+                                 : link.name === "Contact"
+                                 ? "hover-yellow"
+                                 : "hover-red"
+                             }`}
                 >
                   {link.name}
                 </a>

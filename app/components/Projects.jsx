@@ -1,4 +1,3 @@
-// app/components/Projects.jsx
 "use client";
 
 import Link from "next/link";
@@ -32,7 +31,7 @@ const Projects = () => {
   );
 
   return (
-    <section aria-labelledby="projects-heading" className="mb-4">
+    <section id="projects" aria-labelledby="projects-heading" className="mb-4">
       {" "}
       {/* Smallest margin */}
       <h2

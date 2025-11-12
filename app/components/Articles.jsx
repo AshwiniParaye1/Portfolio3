@@ -1,4 +1,3 @@
-// app/components/Articles.jsx
 import Link from "next/link";
 import React from "react";
 import ArticleItem from "./ArticleItem";
@@ -27,7 +26,7 @@ const Articles = () => {
   );
 
   return (
-    <section aria-labelledby="articles-heading" className="mb-4">
+    <section id="articles" aria-labelledby="articles-heading" className="mb-4">
       {" "}
       {/* Smallest margin */}
       <h2

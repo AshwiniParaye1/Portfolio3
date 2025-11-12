@@ -1,9 +1,12 @@
-// app/components/Education.jsx
 import React from "react";
 
 const Education = () => {
   return (
-    <section aria-labelledby="education-heading" className="mb-4">
+    <section
+      id="education"
+      aria-labelledby="education-heading"
+      className="mb-4"
+    >
       {" "}
       {/* Smallest margin */}
       <h2

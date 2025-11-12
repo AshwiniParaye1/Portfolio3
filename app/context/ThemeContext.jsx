@@ -1,4 +1,3 @@
-// app/context/ThemeContext.jsx
 "use client";
 
 import {
@@ -19,17 +18,13 @@ export const ThemeProvider = ({ children, initialIsDark }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      let currentTheme = Cookies.get(THEME_COOKIE_NAME);
-      if (!currentTheme) {
-        currentTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-      }
+      // No need to check for currentTheme from cookie here again,
+      // as initialIsDark already sets the initial state correctly based on server-side cookie.
+      // This useEffect primarily handles subsequent theme changes.
 
-      const shouldBeDark = isDark;
       const htmlElement = document.documentElement;
 
-      if (shouldBeDark) {
+      if (isDark) {
         if (!htmlElement.classList.contains("dark")) {
           htmlElement.classList.add("dark");
         }

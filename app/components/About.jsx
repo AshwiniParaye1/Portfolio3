@@ -1,4 +1,3 @@
-// app/components/About.jsx
 "use client"; // This component might already be a client component, but good to ensure if it uses Framer Motion
 
 import Link from "next/link";
@@ -83,7 +82,7 @@ const About = () => {
   };
 
   return (
-    <section aria-labelledby="about-heading" className="mb-4">
+    <section id="about" aria-labelledby="about-heading" className="mb-4">
       <div className="flex flex-row justify-between items-center mb-2">
         <motion.h1 // Make the H1 animate as well
           id="about-heading"

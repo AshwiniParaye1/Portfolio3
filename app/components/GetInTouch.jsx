@@ -1,10 +1,13 @@
-// app/components/GetInTouch.jsx
 import Link from "next/link";
 import React from "react";
 
 const GetInTouch = () => {
   return (
-    <section aria-labelledby="get-in-touch-heading" className="mb-4">
+    <section
+      id="contact"
+      aria-labelledby="get-in-touch-heading"
+      className="mb-4"
+    >
       {" "}
       {/* Smallest margin */}
       <h2

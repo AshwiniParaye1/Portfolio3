@@ -1,4 +1,3 @@
-// app/components/ThemeToggle.jsx
 "use client";
 
 import { useTheme } from "../context/ThemeContext";
