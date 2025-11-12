@@ -19,6 +19,7 @@ html {
   font-family: "Sour Gummy", sans-serif; /* Apply font globally */
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
 }
 
 body {
