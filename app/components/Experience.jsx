@@ -1,58 +1,68 @@
 import React from "react";
 
-const ExperienceItem = React.memo(({ title, period, description }) => (
-  <li className="mb-4 ">
-    <div className="py-1.5 px-2 -mx-2 relative animated-border-hover hover-pink">
-      <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
-        {title}
-      </h3>{" "}
-      {/* Heading size */}
-      <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-0.5">
-        {period}
-      </p>{" "}
-      {/* Smaller text for period */}
-      <p className="text-gray-700 dark:text-gray-300 text-justify mt-1.5 leading-relaxed text-base">
-        {description}
-      </p>{" "}
-      {/* Paragraph size */}
-    </div>
-  </li>
-));
+const ExperienceItem = React.memo(({ title, period, description }) => {
+  // Split the description into individual bullet points.
+  // This regex splits by periods that are followed by a space and a capital letter,
+  // or just by a period if it's at the end of a line, to handle different sentence structures.
+  // It also filters out empty strings that might result from splitting.
+  const bulletPoints = description
+    .split(
+      /(?<=[.!?])\s+(?=[A-Z])|\s*(?<=[.!?])(?=\s*$)|(?<=[.!?])(?=\s*$)|\. (?=[A-Z]|\d)/
+    )
+    .map((point) => point.trim())
+    .filter((point) => point.length > 0);
+
+  return (
+    <li className="mb-4">
+      <div className="py-1.5 px-2 -mx-2 relative animated-border-hover hover-pink">
+        <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
+          {title}
+        </h3>{" "}
+        {/* Heading size */}
+        <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-0.5">
+          {period}
+        </p>{" "}
+        {/* Smaller text for period */}
+        <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 mt-1.5 leading-relaxed text-base">
+          {bulletPoints.map((point, index) => (
+            <li key={index} className="mb-1">
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
+  );
+});
 
 const Experience = () => {
   const experiences = React.useMemo(
     () => [
       {
         title: "Software Engineer | @Freelance",
-        period: "Dec 2024 - Present",
+        period: "Dec 2024 – Present",
         description:
-          "As a freelance developer, I built an AI-powered CSV chatbot using LLMs, " +
-          "RAG, and vector embeddings. Developed full-stack features with Next.js, " +
-          "React, TypeScript, Tailwind & Supabase. Created responsive UIs and " +
-          "dashboards for multiple clients, turning Figma designs into clean, modern " +
-          "interfaces. Handled state management, API integrations, and performance " +
-          "optimization to deliver scalable solutions.",
+          "Developed an AI document chatbot for PDF, DOCX, CSV and text using LLMs, RAG, and vector embeddings. " +
+          "Engineered full-stack solutions with Next.js, React, TypeScript, Tailwind, and Supabase. " +
+          "Created responsive UI dashboards and landing pages from Figma designs for various clients. " +
+          "Optimized state management, API integrations, and performance for scalable user experiences.",
       },
       {
         title: "Fullstack Developer | @ProjectBoard",
         period: "June 2023 - May 2024",
         description:
-          "As a fullstack developer in ProjectBoard I developed applications using " +
-          "Vue.js and Golang, created REST APIs, implemented state management with " +
-          "Vuex and worked with the databases. I also collaborated on project " +
-          "management with Monday.com and followed best GitHub practices to ensure " +
-          "high-quality code through testing, debugging and optimization.",
+          "Built full-stack web features for a student STEM platform using React.js, Vue.js, JavaScript, and Golang. " +
+          "Designed and integrated REST APIs and database schemas (MySQL, MongoDB) for core platform functionalities. " +
+          "Converted Figma designs into responsive UI, implementing Vuex and Redux for state management in learning modules. " +
+          "Ensured high-quality code through collaboration (Monday.com), GitHub workflows, debugging, and optimization.",
       },
       {
         title: "Software Engineer | @Infosys",
         period: "June 2021 - Nov 2022",
         description:
-          "As a software engineer in Infosys I developed frontend applications using " +
-          "React, focusing on creating responsive and user-friendly interfaces. " +
-          "Contributed to the development of dynamic dashboards, enhancing data " +
-          "visualization and user engagement. Utilized Redux for state management " +
-          "to ensure seamless data flow across the application. Translated Figma " +
-          "designs into fully responsive and interactive user interfaces.",
+          "Developed responsive, user-friendly interfaces for insurance web applications using React and JavaScript. " +
+          "Created dynamic policy and claims dashboards, enhancing data visualization and workflow efficiency. " +
+          "Implemented Redux for robust state management across key insurance modules.",
       },
     ],
     []
