@@ -98,7 +98,7 @@ const ProjectsPage = () => {
           >
             <MdArrowBackIosNew size={18} />
           </Link>
-          <h1 className="text-xl sm:text-2xl font-semibold text-black dark:text-white">
+          <h1 className="text-2xl sm:text-3xl font-semibold text-black dark:text-white">
             Projects
           </h1>
         </div>

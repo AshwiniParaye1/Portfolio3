@@ -65,7 +65,7 @@ const Experience = () => {
       {/* Smallest margin */}
       <h2
         id="experience-heading"
-        className="text-base sm:text-lg font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-pink" // Heading size, margin
+        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-pink" // Heading size, margin
       >
         Experience
       </h2>
