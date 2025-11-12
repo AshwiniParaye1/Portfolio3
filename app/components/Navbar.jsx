@@ -66,8 +66,8 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-neutral-700 dark:text-neutral-300 transition-colors
-                         duration-200 text-lg font-medium relative
+              className={`text-neutral-600 dark:text-neutral-400 transition-colors
+                         duration-200 text-base font-medium relative
                          hover-underline-animation
                          ${
                            // Dynamically apply hover color class
@@ -78,72 +78,19 @@ const Navbar = () => {
                              : link.name === "Projects"
                              ? "hover-green"
                              : link.name === "Skills"
-                             ? "hover-purple"
+                             ? "hover-yellow"
                              : link.name === "Education"
                              ? "hover-blue"
-                             : "hover-blue" // Default hover for others (About & Contact)
+                             : link.name === "Contact"
+                             ? "hover-purple"
+                             : "hover-pink" // Default hover for others (About & Contact)
                          }`}
             >
               {link.name}
             </a>
           ))}
         </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-neutral-700 dark:text-neutral-300 focus:outline-none
-                       ml-auto" // Push to right on mobile
-            aria-label="Toggle navigation menu"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
       </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="md:hidden bg-white dark:bg-neutral-900 pb-4 shadow-lg"
-          >
-            <div className="flex flex-col items-center space-y-4 pt-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={toggleMenu} // Close menu on link click
-                  className={`text-neutral-700 dark:text-neutral-300 transition-colors
-                             duration-200 text-2xl  py-2 w-full text-center
-                             hover-underline-animation
-                             ${
-                               link.name === "Articles"
-                                 ? "hover-orange"
-                                 : link.name === "Experience"
-                                 ? "hover-pink"
-                                 : link.name === "Projects"
-                                 ? "hover-green"
-                                 : link.name === "Skills"
-                                 ? "hover-purple"
-                                 : link.name === "Education"
-                                 ? "hover-blue"
-                                 : link.name === "Contact"
-                                 ? "hover-yellow"
-                                 : "hover-red"
-                             }`}
-                >
-                  {link.name}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.nav>
   );
 };

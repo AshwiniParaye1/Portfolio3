@@ -82,7 +82,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" aria-labelledby="about-heading" className="mb-4">
+    <section id="about" aria-labelledby="about-heading" className="mb-4 mt-4">
       <div className="flex flex-row justify-between items-center mb-2">
         <motion.h1 // Make the H1 animate as well
           id="about-heading"

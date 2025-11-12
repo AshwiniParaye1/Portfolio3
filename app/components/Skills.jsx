@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <section className="flex flex-col mb-4">
       <h2 className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white">
-        <span className="hover-underline-animation hover-purple">Skills</span>{" "}
+        <span className="hover-underline-animation hover-yellow">Skills</span>{" "}
       </h2>
       <div className="flex flex-wrap gap-3">
         {skills.map((skill, index) => (
