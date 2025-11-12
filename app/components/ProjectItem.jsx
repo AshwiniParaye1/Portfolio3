@@ -6,15 +6,13 @@ import React from "react";
 const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
   <li className="mb-4">
     {" "}
-    {/* mb for spacing between list items, bullet point is native to li */}
     <div className="py-1.5 px-2 -mx-2 relative animated-border-hover hover-green">
       <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
         {title}
       </h3>{" "}
-      {/* Heading size */}
       <div
         className="text-gray-800 dark:text-gray-200 flex flex-wrap gap-x-2
-                   gap-y-0.5 mt-0.5 text-sm" // Gap, font size
+                   gap-y-0.5 mt-0.5 text-sm"
       >
         {liveLink && (
           <Link
@@ -47,7 +45,6 @@ const ProjectItem = React.memo(({ title, liveLink, codeLink, description }) => (
       <p className="text-gray-700 dark:text-gray-300 mt-1.5 leading-relaxed text-base">
         {description}
       </p>{" "}
-      {/* Paragraph size */}
     </div>
   </li>
 ));

@@ -1,4 +1,4 @@
-"use client"; // This component might already be a client component, but good to ensure if it uses Framer Motion
+"use client";
 
 import Link from "next/link";
 import React from "react";
@@ -20,11 +20,11 @@ const SocialLink = ({ href, icon: Icon, label, external = true }) => (
     rel={external ? "noopener noreferrer" : undefined}
     aria-label={label}
     className="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-sm block"
-    whileHover={{ scale: 1.2, rotate: 5 }} // Subtle bounce/pulse on hover
-    whileTap={{ scale: 0.9 }} // Visual feedback on tap/click
+    whileHover={{ scale: 1.2, rotate: 5 }}
+    whileTap={{ scale: 0.9 }}
   >
     <Icon
-      size={22} // Increased icon size for better visibility and hover effect
+      size={22}
       className="text-gray-800 dark:text-gray-200 hover:opacity-70 transition-opacity duration-200"
     />
   </motion.a>
@@ -63,19 +63,17 @@ const About = () => {
     []
   );
 
-  // Variants for the container to stagger children animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Delay between each child's animation
-        delayChildren: 0.2, // Delay before the first child animates
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
       },
     },
   };
 
-  // Variants for individual icon items
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
@@ -84,7 +82,7 @@ const About = () => {
   return (
     <section id="about" aria-labelledby="about-heading" className="mb-4 mt-4">
       <div className="flex flex-row justify-between items-center mb-2">
-        <motion.h1 // Make the H1 animate as well
+        <motion.h1
           id="about-heading"
           className="text-xl sm:text-2xl font-semibold text-black dark:text-white"
           initial={{ opacity: 0, y: -20 }}
@@ -96,12 +94,12 @@ const About = () => {
         <ThemeToggle />
       </div>
 
-      <motion.div // Container for social links
-        className="text-base text-gray-600 dark:text-gray-300 mt-1 mb-3 flex flex-row gap-5" // Increased gap for better spacing
+      <motion.div
+        className="text-base text-gray-600 dark:text-gray-300 mt-1 mb-3 flex flex-row gap-5"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible" // Animate when the container enters view
-        viewport={{ amount: 0.5 }} // Trigger every time 50% of container is visible
+        whileInView="visible"
+        viewport={{ amount: 0.5 }}
       >
         {socialLinks.map((link) => (
           <motion.div key={link.href} variants={itemVariants}>
@@ -115,12 +113,12 @@ const About = () => {
         ))}
       </motion.div>
 
-      <motion.p // Make the paragraph animate as well
+      <motion.p
         className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ amount: 0.5 }} // Trigger every time 50% of paragraph is visible
-        transition={{ duration: 0.6, delay: 0.4 }} // Delay to animate after icons
+        viewport={{ amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
       >
         Hey, I'm Ashwini, a Full Stack Developer with a passion for building
         seamless, human-centered web experiences and sharing what I learn along

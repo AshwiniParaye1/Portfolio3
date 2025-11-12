@@ -18,10 +18,6 @@ export const ThemeProvider = ({ children, initialIsDark }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // No need to check for currentTheme from cookie here again,
-      // as initialIsDark already sets the initial state correctly based on server-side cookie.
-      // This useEffect primarily handles subsequent theme changes.
-
       const htmlElement = document.documentElement;
 
       if (isDark) {

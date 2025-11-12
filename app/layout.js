@@ -1,7 +1,6 @@
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 import { cookies } from "next/headers";
-// Constants for metadata to improve maintainability and consistency
 const SITE_NAME = "Ashwini Paraye";
 const SITE_TITLE = "Ashwini Paraye - Fullstack Developer";
 const SITE_DESCRIPTION =

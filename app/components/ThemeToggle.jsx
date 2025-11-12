@@ -12,7 +12,7 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       className="p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800
                  transition-colors duration-200 focus:outline-none focus:ring-2
-                 focus:ring-blue-500" // Padding
+                 focus:ring-blue-500"
       aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
       type="button"
     >
@@ -21,7 +21,6 @@ const ThemeToggle = () => {
       ) : (
         <FiMoon className="text-gray-800 hover:text-black" size={18} />
       )}{" "}
-      {/* Icon size */}
     </button>
   );
 };

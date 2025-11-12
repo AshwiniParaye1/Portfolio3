@@ -28,23 +28,20 @@ const Articles = () => {
   return (
     <section id="articles" aria-labelledby="articles-heading" className="mb-4">
       {" "}
-      {/* Smallest margin */}
       <h2
         id="articles-heading"
-        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-orange" // Heading size, margin
+        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-orange"
       >
         Articles
       </h2>
       <ul className="list-disc pl-4">
         {" "}
-        {/* list-disc and pl-4 */}
         {articles.map((article) => (
           <ArticleItem key={article.url} {...article} />
         ))}
       </ul>
       <p className="mt-2 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         {" "}
-        {/* Paragraph size, margin */}
         Check out more of my articles on{" "}
         <Link
           href="https://medium.com/@ashwini-paraye"
@@ -52,7 +49,7 @@ const Articles = () => {
           rel="noopener noreferrer"
           className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
+                     focus:ring-blue-500 rounded-sm"
           aria-label="Ashwini Paraye's Medium profile"
         >
           Medium

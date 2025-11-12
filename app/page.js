@@ -33,9 +33,8 @@ const Page = () => {
                    px-16 md:px-16 lg:px-24 xl:px-52 py-16 sm:py-12 md:py-20 gap-10
                    min-h-screen max-w-screen-xl mx-auto pt-28"
       >
-        {/* ... sections with IDs ... */}
         <motion.section
-          id="about" // ADDED ID
+          id="about"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -44,9 +43,8 @@ const Page = () => {
           <About />
         </motion.section>
 
-        {/* Skills Section */}
         <motion.section
-          id="skills" // ADDED ID
+          id="skills"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -56,7 +54,7 @@ const Page = () => {
         </motion.section>
 
         <motion.section
-          id="experience" // ADDED ID
+          id="experience"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -66,7 +64,7 @@ const Page = () => {
         </motion.section>
 
         <motion.section
-          id="projects" // ADDED ID
+          id="projects"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -76,7 +74,7 @@ const Page = () => {
         </motion.section>
 
         <motion.section
-          id="articles" // ADDED ID
+          id="articles"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -86,7 +84,7 @@ const Page = () => {
         </motion.section>
 
         <motion.section
-          id="education" // ADDED ID
+          id="education"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
@@ -96,7 +94,7 @@ const Page = () => {
         </motion.section>
 
         <motion.section
-          id="contact" // ADDED ID (common to use "contact" for Get In Touch)
+          id="contact"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"

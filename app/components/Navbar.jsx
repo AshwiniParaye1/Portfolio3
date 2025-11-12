@@ -54,13 +54,6 @@ const Navbar = () => {
                    justify-end md:justify-center h-20 px-4 sm:px-6
                    lg:px-8 xl:px-12"
       >
-        {/* <a
-          href="#about" // Link to the about section on click
-          className="text-2xl font-bold text-neutral-900 dark:text-white tracking-wide" // Adjusted styling
-        >
-          Your Name
-        </a> */}
-        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a
@@ -70,7 +63,6 @@ const Navbar = () => {
                          duration-200 text-base font-medium relative
                          hover-underline-animation
                          ${
-                           // Dynamically apply hover color class
                            link.name === "Articles"
                              ? "hover-orange"
                              : link.name === "Experience"
@@ -83,7 +75,7 @@ const Navbar = () => {
                              ? "hover-blue"
                              : link.name === "Contact"
                              ? "hover-purple"
-                             : "hover-pink" // Default hover for others (About & Contact)
+                             : "hover-pink"
                          }`}
             >
               {link.name}

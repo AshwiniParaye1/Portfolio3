@@ -33,10 +33,9 @@ const Projects = () => {
   return (
     <section id="projects" aria-labelledby="projects-heading" className="mb-4">
       {" "}
-      {/* Smallest margin */}
       <h2
         id="projects-heading"
-        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-green" // Heading size, margin
+        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-green"
       >
         Projects
       </h2>
@@ -45,19 +44,7 @@ const Projects = () => {
           <ProjectItem key={project.title} {...project} />
         ))}
       </ul>
-      <div className="mt-2">
-        {" "}
-        {/* Minimized top margin */}
-        {/* <Link
-          href="/projects"
-          className="text-gray-800 dark:text-gray-200 font-medium text-base
-                     link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
-          aria-label="See all projects"
-        >
-          See More Projects
-        </Link> */}
-      </div>
+      <div className="mt-2"></div>
       <p className="mt-3 text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         I actively build products including <b>Web Apps, </b> <b>Games</b> and{" "}
         <b>Browser Extensions</b>, while also working on projects such as{" "}
@@ -69,7 +56,7 @@ const Projects = () => {
           rel="noopener noreferrer"
           className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
+                     focus:ring-blue-500 rounded-sm"
           aria-label="Ashwini Paraye's GitHub profile"
         >
           GitHub!

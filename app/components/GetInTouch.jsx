@@ -9,16 +9,14 @@ const GetInTouch = () => {
       className="mb-4"
     >
       {" "}
-      {/* Smallest margin */}
       <h2
         id="get-in-touch-heading"
-        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-yellow" // Heading size, margin
+        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-yellow"
       >
         Get In Touch
       </h2>
       <p className="text-gray-700 dark:text-gray-300 text-justify leading-relaxed text-base">
         {" "}
-        {/* Paragraph size */}
         I'd love to hear from you. Whether you have a question or just want to
         talk about tech, my work, projects, or anything else you'd like. Just
         Drop a message over{" "}
@@ -28,7 +26,7 @@ const GetInTouch = () => {
           rel="noopener noreferrer"
           className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
+                     focus:ring-blue-500 rounded-sm"
           aria-label="Connect on LinkedIn"
         >
           {" "}
@@ -39,7 +37,7 @@ const GetInTouch = () => {
           href="mailto:ashwiniparaye1@gmail.com"
           className="text-gray-800 dark:text-gray-200 font-medium text-base
                      link-underline focus:outline-none focus:ring-2
-                     focus:ring-blue-500 rounded-sm" // Link text size
+                     focus:ring-blue-500 rounded-sm"
           aria-label="Send an email"
         >
           {" "}

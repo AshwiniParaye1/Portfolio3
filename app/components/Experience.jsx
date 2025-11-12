@@ -1,10 +1,6 @@
 import React from "react";
 
 const ExperienceItem = React.memo(({ title, period, description }) => {
-  // Split the description into individual bullet points.
-  // This regex splits by periods that are followed by a space and a capital letter,
-  // or just by a period if it's at the end of a line, to handle different sentence structures.
-  // It also filters out empty strings that might result from splitting.
   const bulletPoints = description
     .split(
       /(?<=[.!?])\s+(?=[A-Z])|\s*(?<=[.!?])(?=\s*$)|(?<=[.!?])(?=\s*$)|\. (?=[A-Z]|\d)/
@@ -18,11 +14,9 @@ const ExperienceItem = React.memo(({ title, period, description }) => {
         <h3 className="font-semibold text-sm sm:text-base text-black dark:text-white">
           {title}
         </h3>{" "}
-        {/* Heading size */}
         <p className="text-gray-600 dark:text-gray-400 font-light text-sm mt-0.5">
           {period}
         </p>{" "}
-        {/* Smaller text for period */}
         <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 mt-1.5 leading-relaxed text-base">
           {bulletPoints.map((point, index) => (
             <li key={index} className="mb-1">
@@ -75,16 +69,14 @@ const Experience = () => {
       className="mb-4 "
     >
       {" "}
-      {/* Smallest margin */}
       <h2
         id="experience-heading"
-        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-pink" // Heading size, margin
+        className="text-lg sm:text-xl font-semibold mb-2 text-black dark:text-white hover-underline-animation hover-pink"
       >
         Experience
       </h2>
       <ul className="list-disc pl-4">
         {" "}
-        {/* list-disc and pl-4 */}
         {experiences.map((job) => (
           <ExperienceItem key={job.title} {...job} />
         ))}
