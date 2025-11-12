@@ -1,15 +1,23 @@
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 import { cookies } from "next/headers";
+// Constants for metadata to improve maintainability and consistency
+const SITE_NAME = "Ashwini Paraye";
+const SITE_TITLE = "Ashwini Paraye - Fullstack Developer";
+const SITE_DESCRIPTION =
+  "I’m a developer who loves turning ideas into smooth, meaningful, and beautifully built digital experiences.";
+const SITE_CREATOR = "@AshwiniParaye";
+const SITE_URL = "https://ashwiniparaye.in/";
+const SITE_IMAGE_URL = "https://ashwiniparaye.in/banner1.png";
 
 export const metadata = {
   title: {
-    default: "Ashwini Paraye - Fullstack Developer",
-    template: "%s | Ashwini Paraye",
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "Ashwini Paraye's - Fullstack Developer.",
+  description: SITE_DESCRIPTION,
   keywords: [
-    "Ashwini Paraye",
+    SITE_NAME,
     "Fullstack Developer",
     "React",
     "Next.js",
@@ -18,18 +26,18 @@ export const metadata = {
     "Software Engineer",
     "Portfolio",
   ],
-  authors: [{ name: "Ashwini Paraye" }],
+  authors: [{ name: SITE_NAME }],
   openGraph: {
-    title: "Ashwini Paraye - Fullstack Developer",
-    description: "Ashwini Paraye's - Fullstack Developer.",
-    url: "https://ashwiniparaye.in/",
-    siteName: "Ashwini Paraye Portfolio",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: `${SITE_NAME} Portfolio`,
     images: [
       {
-        url: "https://ashwiniparaye.in/banner1.png",
+        url: SITE_IMAGE_URL,
         width: 1200,
         height: 630,
-        alt: "Ashwini Paraye Portfolio",
+        alt: `${SITE_NAME} Portfolio`,
       },
     ],
     locale: "en_US",
@@ -37,10 +45,10 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashwini Paraye - Fullstack Developer",
-    description: "Ashwini Paraye's - Fullstack Developer.",
-    creator: "@AshwiniParaye",
-    images: ["https://ashwiniparaye.in/banner1.png"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: SITE_CREATOR,
+    images: [SITE_IMAGE_URL],
   },
   robots: {
     index: true,
