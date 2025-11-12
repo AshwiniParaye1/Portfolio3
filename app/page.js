@@ -11,6 +11,7 @@ import Education from "./components/Education";
 
 // Import motion from framer-motion
 import { motion } from "framer-motion";
+import Skills from "./components/Skills";
 
 const Page = () => {
   // Define a common animation variant for consistency
@@ -41,6 +42,16 @@ const Page = () => {
         viewport={{ amount: 0.3 }} // Animate every time 30% of section is in view
       >
         <About />
+      </motion.section>
+
+      {/* Skills Section */}
+      <motion.section
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.3 }}
+      >
+        <Skills />
       </motion.section>
 
       {/* Experience Section */}
