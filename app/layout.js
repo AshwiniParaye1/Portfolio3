@@ -83,8 +83,8 @@ export const metadata = {
 
 const THEME_COOKIE_NAME = "app-theme";
 
-export default function RootLayout({ children }) {
-  const cookieStore = cookies();
+export default async function RootLayout({ children }) {
+  const cookieStore = await cookies();
   const savedTheme = cookieStore.get(THEME_COOKIE_NAME)?.value;
 
   let initialIsDark = savedTheme === "dark";
