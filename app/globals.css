@@ -1,5 +1,5 @@
 /* app/globals.css */
-@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +16,7 @@
 }
 
 html {
-  font-family: "Sour Gummy", sans-serif; /* Apply font globally */
+  font-family: var(--font-geist-sans), sans-serif; /* Apply font globally */
   transition: background-color 0.3s ease, color 0.3s ease;
   scroll-behavior: smooth;
   scroll-padding-top: 10rem;

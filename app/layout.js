@@ -1,6 +1,18 @@
 import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
 import { cookies } from "next/headers";
+import { Geist, Geist_Mono } from "next/font/google";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
 const SITE_NAME = "Ashwini Paraye";
 const SITE_TITLE = "Ashwini Paraye - Fullstack Developer";
 const SITE_DESCRIPTION =
@@ -79,7 +91,11 @@ export default function RootLayout({ children }) {
   const htmlClasses = initialIsDark ? "dark" : "";
 
   return (
-    <html lang="en" suppressHydrationWarning className={htmlClasses}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
       <head></head>
       <body>
         <ThemeProvider initialIsDark={initialIsDark}>{children}</ThemeProvider>
