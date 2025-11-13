@@ -9,7 +9,7 @@ const Projects = () => {
     () => [
       {
         title: "CSV Chatbot",
-        liveLink: "https://csv-chatbot-33xk.vercel.app/",
+        liveLink: "https://csv-chatbott.vercel.app/",
         codeLink: "https://github.com/AshwiniParaye1/CSV-Chatbot",
         description:
           "A CSV chatbot that lets users ask questions and get answers from CSV files.",
