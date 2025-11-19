@@ -6,10 +6,6 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleScroll = () => {
     if (window.scrollY > 20) {
       setScrolled(true);
@@ -38,10 +34,7 @@ const Navbar = () => {
   return (
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 hidden md:block
-              bg-white/90 dark:bg-neutral-900/90 backdrop-blur-sm`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
+               backdrop-blur-lg  ${scrolled ? "shadow-md" : ""}`}
     >
       <div
         className="max-w-screen-xl mx-auto flex items-center
@@ -53,8 +46,8 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className={`text-neutral-600 dark:text-neutral-400 transition-colors
-                         duration-200 text-sm font-medium relative
+              className={`text-gray-500 dark:text-gray-400 transition-colors
+                         duration-200 text-sm font-semibold relative
                          hover-underline-animation
                          ${
                            link.name === "Articles"
