@@ -22,7 +22,7 @@ const Projects = () => {
       },
       {
         title: "Bloom",
-        liveLink: "https://www.bloomwithin.site/",
+        liveLink: "https://bloom.ashwiniparaye.in/",
         codeLink: "https://github.com/AshwiniParaye1/Bloom",
         description: "Your personalized productivity buddy",
       },
